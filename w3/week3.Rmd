@@ -1,0 +1,102 @@
+---
+title: "Week 3"
+date: "2019/10/11"
+output: 
+  xaringan::moon_reader:
+    widescreen: true
+    transition: slower
+    css: [default, styles.css]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+**例1:塑料消费**
+
+.pull-left[
+![](w3_ex1.jpg "塑料消费1")
+]
+
+.pull-right[
+![](w3_ex2.jpg "塑料消费2")
+]
+
+---
+
+**例2:二胡の旅**
+
+![](w3_ex4.jpg "二胡")
+---
+**这种形式呢？**
+
+![](folia.jpg "https://mymodernmet.com/self-reflected-brain-scientific-art/")
+
+.small[
+音乐相关的视觉呈现：
+- [Doodle Chaos](https://www.youtube.com/user/DoodleChaos/videos "Doodle Chaos")，[b站](https://www.bilibili.com/video/av34821558/?p=2)
+- [Nicholas Rougeux](https://www.youtube.com/channel/UCRQH9-hWxELNCv47z2O5nfg), [卡农](https://www.youtube.com/watch?v=DxkpN4PUOzA)
+]
+
+---
+**例3:当代绝症──刷手机**
+
+![](w3_ex5.jpg)
+
+---
+
+## Markdown 操作
+
+[入门教程](https://commonmark.org/help/)：斜体、加粗、插入图片和链接等
+
+![](w3_1.png "快速入门")
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Markdown 操作
+
+.pull-left[
+**段落**
+- 段与段间用 .yellow[*空白行*] 分段
+- 句末用 .violet[`\`] 或者 .yellow[*两个空格*] 断句
+
+**引语**
+- 如果引语有好几行，用 .violet[`>`] 开头可以统一显示
+- .violet[`>`] 和内容之间的空格可有可无，但应该养成对空格的敏感度
+]
+
+--
+
+.pull-right[
+**列表**
+- 有序列表的数字本身可以“乱序”
+- .violet[`*/-/+`] 和内容之间 .yellow[*必须有空格*]
+
+**链接**
+- 直接显示 url 用 .violet[`<>`]
+- 内文链接用
+.violet[
+```
+[显示文字](url "光标文字")
+```
+]
+]
+
+---
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+---
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
