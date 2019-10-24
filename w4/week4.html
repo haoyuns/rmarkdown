@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Week 4-5</title>
+    <meta charset="utf-8" />
+    <link href="week4_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Week 4-5
+### 2019/10/25
+
+---
+
+
+##生活中的设计
+
+--
+
+.small[路牌、路标]
+
+--
+
+.pull-left[
+![](w4_shanghai1.jpg "road sign")
+]
+
+--
+
+.pull-right[
+![](w4_2.png "road sign")
+]
+
+---
+
+.small[橱窗]
+
+--
+
+![](w4_3.png "window")
+---
+
+.small[厕所标识]
+
+--
+
+![](w4_4.png "restroom")
+
+---
+
+##生活中的颜色
+
+--
+
+.small[地铁站墙面]
+
+![](w4_6.png)
+
+---
+.small[菜场]
+
+--
+
+![](w4_7.png)
+
+---
+
+## 色彩基础
+
+**原色、间色、复色**
+
+--
+
+- 原色 Primary Colors  
+  指不能透过其他颜色混合调配而得出的“基本色”，三原色“红、黄、蓝”
+
+--
+
+- 间色/二次色 Secondary Colors  
+  由两种等量的原色混合而成，如橙=红+黄、紫=红+蓝、绿=蓝+黄
+
+--
+
+- 复色/第三色 Tertiary Colors  
+  由色轮上的间色与其相邻的原色混合而成，如黄橙色、蓝紫色
+  
+--
+
+- 互补色 Complementary Colors  
+  色轮上二次色与其正对面的原色为互补色，如红色与绿色、蓝色与橙色
+
+---
+
+## 色彩属性
+
+- 色相 Hue  
+  简单来说，就是色轮上的12种颜色，如红色，黄色
+
+--
+
+- 饱和度/色度 Saturation  
+  指某个颜色的强度，数值越高色彩越纯，低则逐渐变灰
+
+--
+
+- 明度/亮度 Value  
+  指颜色的亮度：往一个颜色里加白色，明度就提高；反之加黑色，明度降低。两个极端就是黑、白两色
+  
+---
+
+## RGB &amp; CMYK
+
+- RGB [三原色光模式][rgb]：  
+.yellow[**适用于电子屏幕**]，三种颜色的光聚在一起形成白光，缺乏光（屏幕关闭）即是黑色  
+![](https://github.com/haoyuns/Fall-2019/blob/master/images/rgb.jpg)
+
+--
+
+- CMYK [印刷四分色模式][cmyk]：  
+青色 Cyan、品红 Magenta、黄色 Yellow、黑色 Key，.yellow[**适用于印刷品**]  
+由于现实情况中，前三种颜色的油墨叠印而成的并不是纯黑，所以需要专门定位标准的黑色，称为Key。没有油墨即是白色  
+![](https://github.com/haoyuns/Fall-2019/blob/master/images/cmyk.png)
+
+[rgb]: https://zh.wikipedia.org/wiki/%E4%B8%89%E5%8E%9F%E8%89%B2%E5%85%89%E6%A8%A1%E5%BC%8F "RGB mode"
+[cmyk]: https://zh.wikipedia.org/wiki/%E5%8D%B0%E5%88%B7%E5%9B%9B%E5%88%86%E8%89%B2%E6%A8%A1%E5%BC%8F "CMYK mode"
+
+---
+## 色彩搭配
+
+**单色** Monochromatic
+
+
+![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-mono.jpeg)
+---
+
+**类似** Analogous
+
+.small[色轮上彼此相邻的颜色组成]
+
+![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-analogous.jpeg)
+
+---
+
+**互补** Complementary
+
+.small[色轮中完全对立的颜色为互补色]
+
+![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-complementary.jpeg)
+---
+**等边互补** Split Complementary
+
+.small[选择一种颜色，再在色轮上找出它正对面的互补色；  
+不直接使用这个互补色，而是使用该互补色两侧的颜色]
+
+![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-split.jpeg)
+
+---
+## 基于数据的[色彩选择](https://blog.datawrapper.de/colors/)
+
+--
+
+- **离散型**色系 Diverging  
+两端颜色为互补色（如红色与绿色），中段颜色通常较浅；可以强调中间值域，并且使得两端的数据一目了然，适合偏重极值和中间值的数据  
+![离散](https://github.com/haoyuns/Fall-2019/blob/master/images/d-diverging.png)
+
+--
+
+- **序列型**色系 Sequential  
+一般是同一色调（Hue）的由浅及深或由深至浅；数值较小用浅色，较大用深色，适合单一主题、比重比较平均的数  
+![序列](https://github.com/haoyuns/Fall-2019/blob/master/images/d-sequential.png)
+
+--
+
+- **分类型**色系 Qualitative/Categorical  
+分类型的每种颜色都“各不相关”，采用不同色调；适合用来区分不同种类下的数据，如区分土地用途  
+![分类](https://github.com/haoyuns/Fall-2019/blob/master/images/d-qualitative.png)
+
+--
+
+- **ColorBrewer** [演示](http://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3)
+---
+
+## 排版原则
+
+--
+
+**亲密性 Proximity**
+
+.small[逻辑上存在有关系的元素应放到一起]
+
+![](w4_8.png)
+
+![](w4_9.png)
+
+---
+![](w4_10.png)
+---
+**对齐性 Alignment**
+
+.small[找到“脊梁骨”]
+
+![](w4_11.png)
+---
+![](w4_12.png)
+---
+**对比性 Contrast**
+
+.small[逻辑不同的元素应该有所区分，避免视觉上相似]
+
+![](w4_14.jpg)
+---
+
+![](w4_13.png)
+
+---
+**重复性 Repitition**
+
+.small[巧妙利用视觉元素的重复]
+
+![](w4_15.png)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
