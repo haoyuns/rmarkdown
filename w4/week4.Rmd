@@ -135,19 +135,33 @@ output:
 
 **类似** Analogous
 
-![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-analogous.jpeg)
+![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-analogous.jpeg)
 
 ---
 
 **互补** Complementary
 
+.small[色轮中完全对立的颜色为互补色]
+
+---
+
 ![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-complementary.jpeg)
 ---
 **等边互补** Split Complementary
 
+.small[选择一种颜色，再在色轮上找出它正对面的互补色；  
+不直接使用这个互补色，而是使用该互补色两侧的颜色]
+---
+
 ![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-split.jpeg)
 
 ---
+**色彩整合**
+
+![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-unify.jpeg)
+
+---
+
 ## 基于数据的[色彩选择](https://blog.datawrapper.de/colors/)
 
 --
@@ -173,7 +187,7 @@ output:
 - **ColorBrewer** [演示](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
 ---
 
-## 排版原则
+## [排版原则](https://www.bilibili.com/video/av12370274)
 
 --
 
