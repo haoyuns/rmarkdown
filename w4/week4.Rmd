@@ -110,14 +110,14 @@ output:
 ## RGB & CMYK
 
 - RGB [三原色光模式][rgb]：  
-.yellow[**适用于电子屏幕**]，三种颜色的光聚在一起形成白光，缺乏光（屏幕关闭）即是黑色  
+.yellow[**适用于电子屏幕**]，三种颜色的光聚成白光，缺乏光（屏幕关闭）即是黑色  
 ![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/rgb.jpg)
 
 --
 
 - CMYK [印刷四分色模式][cmyk]：  
 青色 Cyan、品红 Magenta、黄色 Yellow、黑色 Key，.yellow[**适用于印刷品**]  
-由于现实情况中，前三种颜色的油墨叠印而成的并不是纯黑，所以需要专门定位标准的黑色，称为Key。没有油墨即是白色  
+.small[由于现实情况中，前三种颜色的油墨叠印而成的并不是纯黑，所以需要专门定位标准的黑色，称为Key。没有油墨即是白色]  
 ![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/cmyk.png)
 
 [rgb]: https://zh.wikipedia.org/wiki/%E4%B8%89%E5%8E%9F%E8%89%B2%E5%85%89%E6%A8%A1%E5%BC%8F "RGB mode"
@@ -126,15 +126,14 @@ output:
 ---
 ## 色彩搭配
 
-**单色** Monochromatic
+---
 
+**单色** Monochromatic
 
 ![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-mono.jpeg)
 ---
 
 **类似** Analogous
-
-.small[色轮上彼此相邻的颜色组成]
 
 ![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-analogous.jpeg)
 
@@ -142,14 +141,9 @@ output:
 
 **互补** Complementary
 
-.small[色轮中完全对立的颜色为互补色]
-
 ![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-complementary.jpeg)
 ---
 **等边互补** Split Complementary
-
-.small[选择一种颜色，再在色轮上找出它正对面的互补色；  
-不直接使用这个互补色，而是使用该互补色两侧的颜色]
 
 ![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-split.jpeg)
 
@@ -168,7 +162,7 @@ output:
 一般是同一色调（Hue）的由浅及深或由深至浅；数值较小用浅色，较大用深色，适合单一主题、比重比较平均的数  
 ![序列](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/d-sequential.png)
 
---
+---
 
 - **分类型**色系 Qualitative/Categorical  
 分类型的每种颜色都“各不相关”，采用不同色调；适合用来区分不同种类下的数据，如区分土地用途  
@@ -190,13 +184,13 @@ output:
 ![](w4_8.png)
 
 ---
+.small[网站版块]
 
-![](w4_9.png)
-
----
 ![](w4_10.png)
 ---
 **对齐性 Alignment**
+
+--
 
 .small[找到“脊梁骨”：相关内容必须对齐，方便读者视线快速移动，一眼看到重要信息]
 
@@ -221,12 +215,12 @@ output:
 ![](w4_15.png)
 
 ---
-**其他**
+**其他原则**
 
-- 留白  
-不要排得密密麻麻，空白本身就是对页面的分隔。这样既减少了页面的压迫感，又可以引导读者视线，突出重点内容。
+留白  
+- 不要排得密密麻麻，空白本身就是对页面的分隔。这样既减少了页面的压迫感，又可以引导读者视线，突出重点内容
 
 --
 
-- 降噪  
-颜色过多、字数过多、图形过繁，都是分散读者注意力的"噪音"。
+降噪  
+- 颜色过多、字数过多、图形过繁，都是分散读者注意力的"噪音"

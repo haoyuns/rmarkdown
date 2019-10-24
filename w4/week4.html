@@ -114,15 +114,15 @@ class: center, middle, inverse, title-slide
 ## RGB &amp; CMYK
 
 - RGB [三原色光模式][rgb]：  
-.yellow[**适用于电子屏幕**]，三种颜色的光聚在一起形成白光，缺乏光（屏幕关闭）即是黑色  
-![](https://github.com/haoyuns/Fall-2019/blob/master/images/rgb.jpg)
+.yellow[**适用于电子屏幕**]，三种颜色的光聚成白光，缺乏光（屏幕关闭）即是黑色  
+![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/rgb.jpg)
 
 --
 
 - CMYK [印刷四分色模式][cmyk]：  
 青色 Cyan、品红 Magenta、黄色 Yellow、黑色 Key，.yellow[**适用于印刷品**]  
-由于现实情况中，前三种颜色的油墨叠印而成的并不是纯黑，所以需要专门定位标准的黑色，称为Key。没有油墨即是白色  
-![](https://github.com/haoyuns/Fall-2019/blob/master/images/cmyk.png)
+.small[由于现实情况中，前三种颜色的油墨叠印而成的并不是纯黑，所以需要专门定位标准的黑色，称为Key。没有油墨即是白色]  
+![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/cmyk.png)
 
 [rgb]: https://zh.wikipedia.org/wiki/%E4%B8%89%E5%8E%9F%E8%89%B2%E5%85%89%E6%A8%A1%E5%BC%8F "RGB mode"
 [cmyk]: https://zh.wikipedia.org/wiki/%E5%8D%B0%E5%88%B7%E5%9B%9B%E5%88%86%E8%89%B2%E6%A8%A1%E5%BC%8F "CMYK mode"
@@ -130,15 +130,14 @@ class: center, middle, inverse, title-slide
 ---
 ## 色彩搭配
 
+---
+
 **单色** Monochromatic
 
-
-![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-mono.jpeg)
+![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-mono.jpeg)
 ---
 
 **类似** Analogous
-
-.small[色轮上彼此相邻的颜色组成]
 
 ![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-analogous.jpeg)
 
@@ -146,16 +145,11 @@ class: center, middle, inverse, title-slide
 
 **互补** Complementary
 
-.small[色轮中完全对立的颜色为互补色]
-
-![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-complementary.jpeg)
+![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-complementary.jpeg)
 ---
 **等边互补** Split Complementary
 
-.small[选择一种颜色，再在色轮上找出它正对面的互补色；  
-不直接使用这个互补色，而是使用该互补色两侧的颜色]
-
-![](https://github.com/haoyuns/Fall-2019/blob/master/images/c-split.jpeg)
+![](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/c-split.jpeg)
 
 ---
 ## 基于数据的[色彩选择](https://blog.datawrapper.de/colors/)
@@ -164,19 +158,19 @@ class: center, middle, inverse, title-slide
 
 - **离散型**色系 Diverging  
 两端颜色为互补色（如红色与绿色），中段颜色通常较浅；可以强调中间值域，并且使得两端的数据一目了然，适合偏重极值和中间值的数据  
-![离散](https://github.com/haoyuns/Fall-2019/blob/master/images/d-diverging.png)
+![离散](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/d-diverging.png)
 
 --
 
 - **序列型**色系 Sequential  
 一般是同一色调（Hue）的由浅及深或由深至浅；数值较小用浅色，较大用深色，适合单一主题、比重比较平均的数  
-![序列](https://github.com/haoyuns/Fall-2019/blob/master/images/d-sequential.png)
+![序列](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/d-sequential.png)
 
---
+---
 
 - **分类型**色系 Qualitative/Categorical  
 分类型的每种颜色都“各不相关”，采用不同色调；适合用来区分不同种类下的数据，如区分土地用途  
-![分类](https://github.com/haoyuns/Fall-2019/blob/master/images/d-qualitative.png)
+![分类](https://raw.githubusercontent.com/haoyuns/Fall-2019/master/images/d-qualitative.png)
 
 --
 
@@ -189,18 +183,20 @@ class: center, middle, inverse, title-slide
 
 **亲密性 Proximity**
 
-.small[逻辑上存在有关系的元素应放到一起]
+.small[逻辑上存在有关系的元素应放到一起，相关内容都聚在一个区域中]
 
 ![](w4_8.png)
 
-![](w4_9.png)
-
 ---
+.small[网站版块]
+
 ![](w4_10.png)
 ---
 **对齐性 Alignment**
 
-.small[找到“脊梁骨”]
+--
+
+.small[找到“脊梁骨”：相关内容必须对齐，方便读者视线快速移动，一眼看到重要信息]
 
 ![](w4_11.png)
 ---
@@ -208,7 +204,7 @@ class: center, middle, inverse, title-slide
 ---
 **对比性 Contrast**
 
-.small[逻辑不同的元素应该有所区分，避免视觉上相似]
+.small[加大不同元素的视觉差异，既有活泼感，又方便读者集中注意力阅读某一个子区域]
 
 ![](w4_14.jpg)
 ---
@@ -218,9 +214,20 @@ class: center, middle, inverse, title-slide
 ---
 **重复性 Repitition**
 
-.small[巧妙利用视觉元素的重复]
+.small[巧妙利用视觉元素的重复，多页面排版时，注意各个页面设计上的一致性和连贯性]
 
 ![](w4_15.png)
+
+---
+**其他**
+
+留白  
+- 不要排得密密麻麻，空白本身就是对页面的分隔。这样既减少了页面的压迫感，又可以引导读者视线，突出重点内容。
+
+--
+
+降噪  
+- 颜色过多、字数过多、图形过繁，都是分散读者注意力的"噪音"。
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
