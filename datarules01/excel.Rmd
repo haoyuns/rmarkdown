@@ -141,6 +141,7 @@ Excel文档中应该包含：
 --
 
 .pull-right[
+
 **公式**
 - 单元格绝对引用：.violet[$]
 - CONCATENATE()
@@ -162,7 +163,7 @@ Excel文档中应该包含：
 ![](null.png)
 
 ---
-###Excel的局限性
+###Excel 的局限性
 
 - 打开的工作簿个数：受可用内存、系统限制
 
