@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>数据核验</title>
+    <meta charset="utf-8" />
+    <link href="excel_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 数据核验
+## Excel 操作规范
+### 2019/11/5
+
+---
+
+
+##复用、合作、审核：
+##交接给他人的文档应该是什么样的？
+
+---
+
+###内容
+
+Excel文档中应该包含：
+1. 原始数据表（未经改动，且附上来源链接）
+
+--
+
+2. 处理流程表（操作的公式、数据透视表等）
+
+--
+
+3. 汇总表（结果数据）
+
+---
+
+###命名
+
+- 文件名包含日期和主题
+
+--
+
+- 如果有多个版本，每个版本都要重新存储，命名里包含**版本号**
+
+--
+
+- 如果有多个工作表，工作表命名要易于理解，如：  
+“图1-原始数据”、“处理-去除异常值”、“图1-结果数据”
+
+--
+
+- 不含特殊字符、空格，数值单位需指明
+
+
+---
+
+###表格中常见的规范性问题
+
+**格式**
+- 统一字体字号、对齐方式
+
+--
+
+- 统一**数字格式**，包括小数点位数等  
+![](1.png)
+
+---
+- 数值不要变成文本格式
+
+--
+
+- 统一**行、列间距**
+
+--
+
+- 判断是否为空值：.yellow[ISBLANK()]
+
+--
+
+- 快速去掉**字符串中的空格**：  
+.yellow[TRIM(范围)]，去掉字符串前后的空格  
+.violet[SUBSTITUTE(范围," ","")]，去掉单元格里的所有空格
+
+--
+
+- 公式书写一致，如：  
+不同时存在 .yellow[=sum(A2+A3+A4)] 和 .violet[=sum(A2:A4)]
+
+---
+
+**数据**
+- 处理数据时，**加序号列**，方便随时复原
+
+--
+
+- “列”对应**变量**/标题/属性，“行”对应信息录入
+
+--
+
+- 每列只对应一个变量，每格只对应一个信息
+![](2.png)
+---
+**数据**
+
+- 同一张工作表内，尽量不要有多个表格
+![](3.png)
+
+--
+
+- 一个工作簿内，不要有过多工作表
+
+--
+
+- 处理后的数据，无合并单元格、无手工计算
+
+--
+
+- 尽量避免以颜色来暗示信息
+
+---
+
+###基础操作
+
+.pull-left[
+
+**一些快捷键**
+- 移动到数据区域的边缘：.yellow[Ctrl/Command + 箭头]
+- 选定整张工作表：  
+.yellow[Ctrl/Command + A]
+- 选定整列：.yellow[Ctrl/Command + 空格]
+- 选定整行：.yellow[Shift + 空格]
+- 在单元格中换行：.yellow[Alt + 回车]
+- 自动填充：  
+挪到单元格右下角，双击 .yellow[+] 号
+]
+
+--
+
+.pull-right[
+**公式**
+- 单元格绝对引用：.violet[$]  
+快捷键 F4 可以让行和列同时变成绝对引用
+- CONCATENATE()
+- .yellow[COUNT()]，统计数值单元格个数  
+.violet[COUNTA()]，统计非空单元格个数
+- .yellow[LEN()]，统计字符个数  
+.violet[LENB()]，统计字节个数（中文计算为2个字节）
+- LEFT(), RIGHT()
+- YEAR(), MONTH(), DAY()
+- TODAY(), NOW()
+- WORKDAY(日期,工作日天数,排除的特殊假期)
+
+]
+
+---
+
+###数据缺失：“0”和“空白”的差异
+
+![](null.png)
+
+---
+###Excel的局限性
+
+- 打开的工作簿个数：受可用内存、系统限制
+
+--
+
+- 工作簿中的工作表个数：受可用内存限制
+
+--
+
+- 工作表的总行数、列数：.yellow[1,048,576 行 x 16,384 列]
+
+--
+
+- 工作表的数据透视表个数：受可用内存限制
+
+--
+
+- 计算允许的最早日期：.yellow[1900 年 1 月 1 日]  
+（如果使用 1904 年日期系统，则为 1904 年 1 月 1 日）  
+计算允许的最晚日期：.yellow[9999 年 12 月 31 日]
+
+--
+
+- 数字精度：.yellow[15] 位
+
+--
+
+- 图表引用的工作表个数：.yellow[255]
+
+--
+
+更多参阅：[官方文档](https://support.office.com/zh-cn/article/excel-%E8%A7%84%E8%8C%83%E4%B8%8E%E9%99%90%E5%88%B6-1672b34d-7043-467e-8e27-269d656771c3)
+
+---
+###Excel Checklist：数据规范性
+
+1. 检查文件、工作表命名：能否方便他人快速定位
+2. 检查是否包括了原始数据及其链接
+3. 检查处理后数据的格式是否统一
+4. 检查处理后数据是否包含空格
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
