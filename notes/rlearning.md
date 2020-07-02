@@ -1,15 +1,39 @@
 
 #### Data and variables
-快速查看数据
+查看数据结构
 - base包里的`str()`
 - dplyr包里的`glimpse()`
 
+- Table to explore: `table(data$column)`  
+Filter to subset  
+Drop (unused) levels: `droplevels()`
+
 指令
-- `if_else()`
-- `case_when()`
-- `droplevels()`
+- `ifelse()`  
+example:  
+x = ifelse(logical test,  
+result if TRUE, result if FALSE)
+
+- `case_when()`  
+example:  
+x = case_when(  
+    [condition 1] ~ [value 1],  
+    [condition 2] ~ [value 2],  
+    [condition 3] ~ [value 3]  
+)
+
 - `factor()` 把数值变量因子化
-- `(y <- mean(x$z))` 可以既assign value也打印结果
+
+- `(y <- mean(x$z))` 既assign value也打印结果
+
+#### Types of variables
+- Numerical (quantitative): numerical values
+	- Continuous: infinite number of values within a given range, often measured
+	- Discrete: specific set of numeric values that can be counted or enumerated, often counted
+
+- Categorical (qualitative):   
+limited number of distinct categories, often stored as factors in R, common in subgroup analysis
+	- Ordinal: finite number of values within a given range, often measured
 
 #### Types of studies
 - Observational
@@ -28,12 +52,16 @@ Random sampling & Random assignment
 
 #### Sampling
 1. Simple random sample
+
 dplyr - `sample_n(size = 100)`
 
 2. Stratified Sample (stratum)
-dplyr
-`group_by()
- sample_n(size = 100)`
+
+dplyr -
+
+`group_by()`
+
+`sample_n(size = 100)`
 
 3. Cluster Sample (cluster)
 4. Multistage sample
