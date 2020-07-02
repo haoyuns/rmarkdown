@@ -24,7 +24,7 @@
 #### Scope of inference
 Random sampling & Random assignment
 
-![random]("rlearning-random.png")
+<img src="rlearning-random.png" width="400">
 
 #### Sampling
 1. Simple random sample
