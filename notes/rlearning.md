@@ -45,10 +45,16 @@ limited number of distinct categories, often stored as factors in R, common in s
 
 <img src="rlearning-study-design.png" width="600">
 
-#### Scope of inference
-Random sampling & Random assignment
+#### Scope of inference 统计推断
+- Random sampling
+	- At selection of subjects from population
+	- Helps generalizability of results
 
-<img src="rlearning-random.png" width="400">
+- Random assignment
+	- At selection of subjects from population
+	- Helps infer causation from results
+
+<img src="rlearning-inference.png" width="600">
 
 #### Sampling
 1. Simple random sample
