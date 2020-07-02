@@ -1,11 +1,10 @@
 ## Introduction to Data in R
 
-#### Data and variables
 查看数据结构
 - base包里的`str()`
 - dplyr包里的`glimpse()`
 
-Dealing with factors 指令
+#### Dealing with factors 指令
 ```
 # table to explore
 table(data)
@@ -38,6 +37,7 @@ x = case_when(
 limited number of distinct categories, often stored as factors in R, common in subgroup analysis
 	- Ordinal: finite number of values within a given range, often measured
 
+
 #### Types of studies
 - Observational
 	- Collect data in a way that does not directly interfere with how the data arise
@@ -47,6 +47,7 @@ limited number of distinct categories, often stored as factors in R, common in s
 	- Causation can be inferred
 
 <img src="rlearning-study-design.png" width="600">
+
 
 #### Scope of inference 统计推断
 - Random sampling
@@ -59,13 +60,13 @@ limited number of distinct categories, often stored as factors in R, common in s
 
 <img src="rlearning-inference.png" width="600">
 
+
 #### Sampling
 1. Simple random sample
 
 dplyr - `sample_n(size = 100)`
 
 2. Stratified Sample (stratum)
-
 
 ```
 group_by()
@@ -74,6 +75,7 @@ sample_n(size = 100)
 
 3. Cluster Sample (cluster)
 4. Multistage sample
+
 
 #### Principles of experimental design
 - Control: compare treatment of interest to a control group
@@ -85,6 +87,7 @@ sample_n(size = 100)
 - Block: account for the potential effect of confounding variables
 	- Group subjects into blocks based on these variables
 	- Randomize within each block to treatment groups
+
 
 ## Exploratory Data Analysis
 
