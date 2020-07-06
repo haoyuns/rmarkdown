@@ -52,7 +52,8 @@ ggplot(comics, aes(x = align, fill = gender)) +
 ```
 <img src="rlearning-bar1.png" width = 400>
 
-## Distribution of one variable
+## Exploring Numerical Data
+### Distribution of one variable
 Marginal distribution
 ```
 tab_cnt <- table(comics$id, comics$align) 
@@ -71,10 +72,10 @@ ggplot(comics, aes(x = id)) +
 ggplot(data, aes(x = weight)) + geom_dotplot(dotsize = 0.4)
 
 # Histogram (with binwidth)
-ggplot(data, aes(x = weight)) + geom_histogram(binwidth = 3)
+ggplot(data, aes(x = weight)) + geom_histogram(binwidth = 3) + facet_wrap(~spam)
 
 # Density plot (with bandwidth)
-ggplot(data, aes(x = weight)) + geom_density(bw = 5)
+ggplot(data, aes(x = log(exclaim_mess + .01), fill = spam)) + geom_density(bw = 5, alpha = .3)
 
 # Boxplot
 ggplot(data, aes(x = 1, y = weight)) + geom_boxplot()
@@ -101,7 +102,9 @@ Higher dimension plots
 - x-coordinate
 - y-coordinate
 
-## Measures of Center and Variablity
+## Numerical Summaries
+
+### Measures of Center and Variablity
 **Center**
 
 - `mean()`
@@ -120,6 +123,56 @@ life %>%
 **Variablity**
 
 - standard deviation:`sd()`
-- variance:`var()`
-- interquartile range:`IQR()`
-- range:`diff(range())`
+- variance:`var()`  
+即 sum((x - mean(x))^2) / (n -1)
+- interquartile range:`IQR()`  
+即 distance between the two numbers that cut off the middle 50% of your data (the height of box in boxplot)
+- range:`diff(range())`  
+即 max - min
+
+In case of extreme observations, `IQR()` depicts the most accurate spread.
+
+### Shape and transformations
+**Modality**
+
+- Unimodal
+- Bimodal
+- Multimodal
+- Uniform
+
+**Skew**
+
+- Right-skewed
+- Left-skewed
+- Symmetric
+
+
+**Plotting without Outliers**
+
+- 用log()减弱outliers的影响
+```
+ggplot(life, aes(x = income, fill = west_coast)) +
+geom_density(alpha = .3)
+ggplot(life, aes(x = log(income), fill = west_coast)) + geom_density(alpha = .3)
+```
+
+- 直接定义及去掉outliers
+```
+life <- life %>%
+mutate(is_outlier = income > 75000) 
+
+life %>%
+filter(!is_outlier) %>%
+ggplot(aes(x = income, fill = west_coast)) +
+geom_density(alpha = .3)
+```
+
+### Zero inflation strategies
+1. Analyze two components separately
+
+There are two mechanisms going on: one generating the zeros, and the other generating the non-zeros.
+
+2. Collapse into two-level categorical variable
+
+A simpler approach: think of the variable as actually only taking two values, zero or not-zero, and treating it like a categorical variable.
+
