@@ -2,10 +2,12 @@
 
 ## Introduction to Modeling
 General modeling framework formula:  
+$y = f(\overrightarrow{x}) + \epsilon$
+
 - `y`: outcome variable of interest, the phenomenon you wish to model
-- `x`: explanatory/predictor variables used to inform your model
+- $\overrightarrow{x}$: explanatory/predictor variables used to inform your model
 - `f()`: function of the relationship between `y` and `x` (*the signal*)
-- epsilon: unsystematic error component (*the noise*)
+- $\epsilon$: unsystematic error component (*the noise*)
 
 
 ### Modeling for explanation
