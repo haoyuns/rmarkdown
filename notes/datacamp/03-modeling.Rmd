@@ -1,0 +1,43 @@
+# Modeling with Data in the Tidyverse
+
+## Introduction to Modeling
+General modeling framework formula:  
+$y = f(\overrightarrow{x}) + \epsilon$
+
+- `y`: outcome variable of interest, the phenomenon you wish to model
+- $\overrightarrow{x}$: explanatory/predictor variables used to inform your model
+- `f()`: function of the relationship between `y` and `x` (*the signal*)
+- $\epsilon$: unsystematic error component (*the noise*)
+
+### The modeling problem for explanation
+$y = f(\overrightarrow{x}) + \epsilon$
+
+1. usually you won't know the true form of $f()$, nor the mechanism that generates the errors $\epsilon$
+
+2. you will know the observations `y` and $\overrightarrow{x}$, as they are given in our data
+
+3. the goal is to construct or "fit" a model f-hat that approximates $\hat{f}()$ while ignoring $epsilon$
+
+4. **goal restated**: separate the signal from the noise
+
+5. then generate *fitted/predicted* values $\hat{y} = \hat{f}(\overrightarrow{x})$
+
+univariate: only considering one variable at a time
+
+overplotting: adding random jitter `geom_jitter()`
+
+**Correlation coefficient**:  
+`cor()`, a summary statistic between -1/1 measuring the strength of linear association of two numerical variables, or the degree to which points fall on a line
+
+
+
+### The modeling problem for prediction
+
+
+## Modeling with Basic Regression
+
+
+## Modeling with Multiple Regression
+
+
+## Model Assessment and Selection
