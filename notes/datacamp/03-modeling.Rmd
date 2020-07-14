@@ -4,9 +4,9 @@
 General modeling framework formula:  
 $y = f(\overrightarrow{x}) + \epsilon$
 
-- `y`: outcome variable of interest, the phenomenon you wish to model
+- $y$: outcome variable of interest, the phenomenon you wish to model
 - $\overrightarrow{x}$: explanatory/predictor variables used to inform your model
-- `f()`: function of the relationship between `y` and `x` (*the signal*)
+- $f()$: function of the relationship between $y$ and $x$ (*the signal*)
 - $\epsilon$: unsystematic error component (*the noise*)
 
 ### The modeling problem for explanation
@@ -14,7 +14,7 @@ $y = f(\overrightarrow{x}) + \epsilon$
 
 1. usually you won't know the true form of $f()$, nor the mechanism that generates the errors $\epsilon$
 
-2. you will know the observations `y` and $\overrightarrow{x}$, as they are given in our data
+2. you will know the observations $y$ and $\overrightarrow{x}$, as they are given in our data
 
 3. the goal is to construct or "fit" a model f-hat that approximates $\hat{f}()$ while ignoring $epsilon$
 
@@ -30,8 +30,17 @@ overplotting: adding random jitter `geom_jitter()`
 `cor()`, a summary statistic between -1/1 measuring the strength of linear association of two numerical variables, or the degree to which points fall on a line
 
 
-
 ### The modeling problem for prediction
+Key difference in modeling goals:
+
+1. **Explanation:**  
+We care about the form of $\hat{f}()$, in particular any values quantifying relationships between $y$ and $\overrightarrow{x}$
+
+2. **Prediction:**  
+We don't care so much about the form of $\hat{f}()$, only that it yields "good" predictions $\hat{y}$ of $y$ based on $\overrightarrow{x}$
+
+
+
 
 
 ## Modeling with Basic Regression
