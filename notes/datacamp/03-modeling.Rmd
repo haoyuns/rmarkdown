@@ -40,11 +40,49 @@ We care about the form of $\hat{f}()$, in particular any values quantifying rela
 We don't care so much about the form of $\hat{f}()$, only that it yields "good" predictions $\hat{y}$ of $y$ based on $\overrightarrow{x}$
 
 
-
-
-
 ## Modeling with Basic Regression
+**Truth:**
 
+- Assume $f(x) = \beta_0 + \beta_1 \cdot x$
+- *Observed* value $y = f(x) + \epsilon = \beta_0 + \beta_1 \cdot x + \epsilon$
+
+**Fitted:**
+
+- Assume $\hat{f}(x) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
+- *Fitted/predicted* value $\hat{y} = \hat{f}(x) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
+
+```
+# Add a "best-fitting" line
+geom_smooth(method = "lm", se = FALSE)
+
+# Fit regression model using formula of form: y ~ x
+# y: outcome, x: explanatory variable
+
+model <- lm(formula = score ~ age, data = evals)
+
+# Output regression table using wrapper function
+get_regression_table(model)
+```
+### Predicted value
+- Predictive regression models in general:  
+$\hat{y} = \hat{f}(x) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
+- Our predictive model: $sc\hat{o}re = 4.46 - 0.006 \cdot age$
+
+### Residuals as model errors
+- Residual = $y - \hat{y}$
+- Corresponds to $\epsilon$ from $y = f(\overrightarrow{x}) + \epsilon$
+- For our example instructor: $y - \hat{y} = 3.5 - 4.22 = -0.72$
+- With linear regression, sometimes you'll obtain positive residuals and other times negative.  
+In linear regression, they are on average 0.
+
+**Computing all predicted values**
+
+```
+# Get information on each point
+
+model <- lm(formula = score ~ age, data = evals)
+get_regression_points(model)
+```
 
 ## Modeling with Multiple Regression
 
