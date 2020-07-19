@@ -41,6 +41,17 @@ We don't care so much about the form of $\hat{f}()$, only that it yields "good" 
 
 
 ## Modeling with Basic Regression
+### Refresher: Modeling in general
+**Truth:**
+
+Assumed model is $y = f(\overrightarrow{x}) + \epsilon$
+
+**Goal:**
+
+Given $y$ and $overrightarrow{x}$, fit a model $\hat{f}(\overrightarrow{x})$ that approximates $f(\overrightarrow{x})$, where $\hat{y} = \hat{f}(\overrightarrow{x})$ is the *fitted/predicted* value for the observed value $y$
+
+### Modeling with Basic Regression
+
 **Truth:**
 
 - Assume $f(x) = \beta_0 + \beta_1 \cdot x$
@@ -51,10 +62,20 @@ We don't care so much about the form of $\hat{f}()$, only that it yields "good" 
 - Assume $\hat{f}(x) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
 - *Fitted/predicted* value $\hat{y} = \hat{f}(x) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
 
+**Regression line**
+
 ```
 # Add a "best-fitting" line
 geom_smooth(method = "lm", se = FALSE)
+```
 
+Equation for fitted regression line: $\hat{y} = \hat{f}(\overrightarrow{x}) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
+
+**Computing slope and intercept of regression line**
+
+Using the formula form y ~ x, which is akin to $\hat{y} = \hat{f}(\overrightarrow{x})$
+
+```
 # Fit regression model using formula of form: y ~ x
 # y: outcome, x: explanatory variable
 
@@ -67,8 +88,11 @@ get_regression_table(model)
 - Predictive regression models in general:  
 $\hat{y} = \hat{f}(x) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
 - Our predictive model: $sc\hat{o}re = 4.46 - 0.006 \cdot age$
+- Our prediction: 4.46 - 0.006 x 40 = 4.22
 
-### Residuals as model errors
+### Prediction error
+**Residuals as model errors**
+
 - Residual = $y - \hat{y}$
 - Corresponds to $\epsilon$ from $y = f(\overrightarrow{x}) + \epsilon$
 - For our example instructor: $y - \hat{y} = 3.5 - 4.22 = -0.72$
@@ -82,9 +106,86 @@ In linear regression, they are on average 0.
 
 model <- lm(formula = score ~ age, data = evals)
 get_regression_points(model)
+
+# A tibble: 463 x 5      
+      ID  score age   score_hat residual
+<int> <dbl> <dbl>     <dbl>    <dbl> 
+1     1   4.7    36      4.25    0.452
+2     2   4.1    36      4.25   -0.148
+3     3   3.9    36      4.25   -0.348
+4     4   4.8    36      4.25    0.552
+5     5   4.6    59      4.11    0.488
+6     6   4.3    59      4.11    0.188
+7     7   2.8    59      4.11   -1.31
+8     8   4.1    51      4.16   -0.059
+9     9   3.4    51      4.16   -0.759
+10    10  4.5    40      4.22    0.276
+# ... with 453 more rows
+```
+
+### Fitting a regression with a categorical x
+return group means of different categories of x
+
+```
+# Fit regression model
+model_score_3 <- lm(score ~ gender, data = evals)
+
+# Get regression table
+get_regression_table(model_score_3)
+
+# A tibble: 2 x 7
+term       estimate std_error statistic p_value lower_ci upper_ci  <chr>         <dbl>     <dbl>     <dbl>   <dbl>    <dbl>    <dbl>
+1 intercept     4.09      0.039    106.     0        4.02     4.17
+2 gendermale    0.142     0.051      2.78   0.006    0.042    0.241
+
+# Compute group means based on gender
+evals %>%   
+group_by(gender) %>%   
+summarize(avg_score = mean(score), sd_score = sd(score))
+
+# A tibble: 2 x 2
+gender avg_score    sd_score
+<fct>      <dbl>    <dbl>
+1 female      4.09    0.564
+2 male        4.23    0.522
+
+# Get information on each point
+get_regression_points(model_score_3)
+
 ```
 
 ## Modeling with Multiple Regression
+Fit regression model using formula of form: y ~ x1 + x2
+
+```
+# y tilde x1 PLUS x2, where the plus indicates you are using more than one explanatory variable
+model_price_1 <- lm(log10_price ~ log10_size + yr_built, data = house_prices)
+
+# Output regression table
+get_regression_table(model_price_1)
+```
+
+**Best fit and residuals**
+
+```
+# Computing all predicted values and residuals
+get_regression_points(model_price_1)
+
+# Square all residuals and sum them
+get_regression_point(model_price_1) %>%
+  mutate(sq_residuals = residuals^2) %>%
+  summarize(sum_sq_residuals = sum(sq_residuals))
+```
+
+<img src="rlearning-plane-residuals.png" width="600">
+
+Just as with "best-fitting" regression lines, of all possible planes, the regression plane minimizes the sum of squared residuals. This is what is meant by "best fitting" plane.
+
 
 
 ## Model Assessment and Selection
+
+
+
+
+
