@@ -22,9 +22,9 @@ $y = f(\overrightarrow{x}) + \epsilon$
 
 5. then generate *fitted/predicted* values $\hat{y} = \hat{f}(\overrightarrow{x})$
 
-univariate: only considering one variable at a time
+*univariate*: only considering one variable at a time
 
-overplotting: adding random jitter `geom_jitter()`
+*overplotting*: adding random jitter `geom_jitter()`
 
 **Correlation coefficient**:  
 `cor()`, a summary statistic between -1/1 measuring the strength of linear association of two numerical variables, or the degree to which points fall on a line
@@ -71,6 +71,7 @@ geom_smooth(method = "lm", se = FALSE)
 
 Equation for fitted regression line: $\hat{y} = \hat{f}(\overrightarrow{x}) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
 
+
 **Computing slope and intercept of regression line**
 
 Using the formula form y ~ x, which is akin to $\hat{y} = \hat{f}(\overrightarrow{x})$
@@ -87,6 +88,7 @@ get_regression_table(model)
 ### Predicted value
 - Predictive regression models in general:  
 $\hat{y} = \hat{f}(x) = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$
+
 - Our predictive model: $sc\hat{o}re = 4.46 - 0.006 \cdot age$
 - Our prediction: 4.46 - 0.006 x 40 = 4.22
 
@@ -155,6 +157,7 @@ get_regression_points(model_score_3)
 ```
 
 ## Modeling with Multiple Regression
+### Combining numerical variables
 Fit regression model using formula of form: y ~ x1 + x2
 
 ```
@@ -181,11 +184,124 @@ get_regression_point(model_price_1) %>%
 
 Just as with "best-fitting" regression lines, of all possible planes, the regression plane minimizes the sum of squared residuals. This is what is meant by "best fitting" plane.
 
+### Combining numerical and categorical variables
+Recall the notion of a "baseline for comparison" level when using a categorical variable in a regression model.
+
+```
+model_price_3 <- lm(log10_price ~ log10_size + condition, data = house_prices)
+
+get_regression_table(model_price_3)
+
+# A tibble: 6 x 7
+term  estimate  std_error statist
+```
+
+house price for condition3:  
+$\hat{y} = 2.88 +0.032 + 0.837 \cdot 2.90 = 5.34$
+
+importing new data frame:  
+`get_regression_points(model_price_3, newdata = new_houses)`
 
 
 ## Model Assessment and Selection
+### Assessing with sum of squared residuals
+
+```
+get_regression_point(model_price_1) %>%
+  mutate(sq_residuals = residuals^2) %>%
+  summarize(sum_sq_residuals = sum(sq_residuals))
+```
+
+### Assessing with R-squared
+
+R-squared is another numerical summary of how well a model fits points.
+
+**Variance 方差**: another measure of variability/spread, $sd ^ 2$
+
+**R-squared**  
+1 minus the variance of the residuals over the variance of the outcome variable:  
+$R^2 = 1 - \dfrac{Var(residuals)}{Var(y)}$
 
 
+- Since $Var(y) \geqslant Var(residuals)$, so $R^2$ is between 0 & 1
+- Smaller $R^2$ ~ "poorer fit"
+- $R^2 = 1$ ~ "perfect fit" and $R^2 = 0$ ~ "no fit"
 
 
+$R^2$ is the proportion of the total variation in the outcome variable $y$ that the model explains.
 
+```
+get_regression_points(model_price_1) %>%
+  summarize(r_squared = 1 - var(residual) / var(log10_price))
+```
+
+### Assessing predictions with RMSE
+Root mean square error 均方根误差:
+
+```
+# Mean squared error
+get_regression_point(model_price_1) %>%
+  mutate(sq_residuals = residuals^2) %>%
+  summarize(mse = mean(sq_residuals))
+  
+# Root mean squared error 最后一步开根号
+get_regression_point(model_price_1) %>%
+  mutate(sq_residuals = residuals^2) %>%
+  summarize(mse = mean(sq_residuals)) %>%
+  mutate(rmse = sqrt(mse))
+```
+
+RMSE can be thought of as the "typical" error a predictive model will make.
+
+### "Validation set" prediction framework
+This forms the backbone of a well-known machine learning method for model assessment called cross-validation.
+
+**Validation set approach**
+
+Use two independent dataset to:
+
+1. Train/fit your model on one set of data
+2. Evaluate your model's predictive power, i.e., validate your model's performance on a different set of data
+
+**Training/test set split in R**
+
+```
+# Randomly shuffle order of rows:
+house_price_shuffled <- house_prices %>%
+  sample_frac(size = 1, replace = FALSE)
+
+# Split into train and test:
+train <- house_price_shuffled %>%
+  slice(1:10000)
+test <- house_price_shuffled %>%
+  slice(10001:21613) %>%
+
+# Train model on train:
+train_model_price_1 <- lm(log10_price ~ log10_size + yr_built, data = train)
+
+# Get predictions on test:
+get_regression_points(train_model_price_1, newdata = test)
+
+# Assessing and comparing RMSE
+```
+
+## Where to go from here?
+- R source code for all videos  
+Available at http://bit.ly/modeling_tidyverse
+
+- DataCamp courses using other models  
+Courses with different $f()$ in $y=f(\overrightarrow{x})+ε$:
+  - [Machine Learning with Tree-Based Models in R](https://learn.datacamp.com/courses/machine-learning-with-tree-based-models-in-r)
+  - [Supervised Learning in R: Case Studies](https://learn.datacamp.com/courses/supervised-learning-in-r-case-studies)
+
+
+- ModernDive: [Online textbook](https://moderndive.com/)
+  - Uses `tidyverse` tools: `ggplot2` and `dplyr`
+  - Expands on the regression models from this course
+  - Uses `evals` and `house_prices` datasets (and more)
+  - Goal: Statistical inference via data science
+
+- More to explore:
+  - Parallel slopes model
+  - Polynomial model
+  - Tree models
