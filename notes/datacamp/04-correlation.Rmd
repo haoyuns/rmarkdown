@@ -1,0 +1,59 @@
+# Correlation and Regression in R
+
+## Visualizing two variables
+### Bivariate relationships
+
+- Both variables are numerical
+- Response variable
+  - y, dependent
+- Explanatory variable
+  - something you think might be related to the response
+  - x, independent, predictor
+
+### Graphical representations
+- Put response on vertical axis
+- Put explanatory on horizontal axis
+
+- **Scatterplots** are the most common and effective tools for visualizing the relationship between two numeric variables
+- You can think of **boxplots** as scatterplots for which the variable on the x-axis has been discretized.
+
+Boxplot `aes(x = cut(data-for-x-axis, breaks = 5))`
+
+Any patterns and deviations from those patterns, we see in these plots could give us some insight into the nature of the underlying phenomenon.
+
+### Characterizing bivariate relationships
+
+We look for four things: form, direction, strength, and outliers.
+
+- **Form** (e.g. linear, quadratic, non-linear)  
+the overall shape made by the points
+
+- **Direction** (e.g. positive, negative)  
+whether the two variables tend to move in the same direction
+
+- **Strength** (how much scatter/noise?)  
+  - Do the points seem to be clustered together in a way that suggests a close relationship?
+  - Or are they very loosely organized?
+
+- **Outliers**  
+These outliers may be erroneous measurements, or they can be exceptions that help clarify the general trend.
+
+```
+# Scatterplot with scale_x_log10() and scale_y_log10()
+
+ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
+    geom_point() +
+    scale_x_log10(BodyWt) + 
+    scale_y_log10(BrainWt)
+
+# Scatterplot with scale_x_log10() and scale_y_log10()
+
+ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) + geom_point() +
+    scale_x_log10(BodyWt) + 
+    scale_y_log10(BrainWt)
+```
+
+
+
+
+
