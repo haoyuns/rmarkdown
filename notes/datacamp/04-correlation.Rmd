@@ -4,8 +4,10 @@
 ### Bivariate relationships
 
 - Both variables are numerical
+
 - Response variable
   - y, dependent
+
 - Explanatory variable
   - something you think might be related to the response
   - x, independent, predictor
@@ -16,6 +18,7 @@
 
 - **Scatterplots** are the most common and effective tools for visualizing the relationship between two numeric variables
 - You can think of **boxplots** as scatterplots for which the variable on the x-axis has been discretized.
+
 
 Boxplot `aes(x = cut(data-for-x-axis, breaks = 5))`
 
@@ -38,20 +41,71 @@ whether the two variables tend to move in the same direction
 - **Outliers**  
 These outliers may be erroneous measurements, or they can be exceptions that help clarify the general trend.
 
+
 ```
 # Scatterplot with scale_x_log10() and scale_y_log10()
-
 ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
     geom_point() +
     scale_x_log10(BodyWt) + 
     scale_y_log10(BrainWt)
 
-# Scatterplot with scale_x_log10() and scale_y_log10()
-
-ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) + geom_point() +
-    scale_x_log10(BodyWt) + 
-    scale_y_log10(BrainWt)
+# Scatterplot with coord_trans()
+ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
+  geom_point() + 
+  coord_trans(x = "log10", y = "log10")
 ```
+
+<img src="coord-trans.png" width="400px">
+
+## Correlation
+Quantifying the strength of bivariate relationships
+
+- Correlation coefficient between -1 and 1  
+captures the strength of the linear relationship between two variables
+
+- Sign -> direction positive or negative
+
+- Magnitude -> strength
+
+*It's common to encounter variables that are strongly-related, but in a nonlinear way.*
+
+
+### Pearson product-moment correlation
+Correlation is most often denoted with the letter r and it is a function of two variables, most commonly x and y.
+
+$r(x,y) = \dfrac{Cov(x,y)}{\sqrt{SXX \cdot SYY}}$
+
+`*denominator 分母 numerator 分子*`
+
+$r(x,y) = \dfrac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2 \cdot \sum_{i=1}^n(y_i-\bar{y})^2}}$
+
+
+**cor()**
+
+The `cor(x, y)` function will compute the Pearson product-moment correlation between variables. At the same time, the `cor()` function is very conservative when it encounters missing data (e.g. `NA`s). 
+
+The `use` argument allows you to override the default behavior of returning `NA` whenever any of the values encountered is `NA`. Setting the `use` argument to `"pairwise.complete.obs"` allows `cor()` to compute the correlation coefficient for those observations where the values of `x` and `y` are both not missing.
+
+```
+# Compute correlation for all non-missing pairs
+
+ncbirths %>%
+  summarize(N = n(), r = cor(weight, weeks, use = "pairwise.complete.obs"))
+```
+
+### *Francis Anscombe* dataset
+In 1973, Francis Anscombe famously created four datasets with remarkably similar numerical properties, but obviously different graphic relationships. 
+
+```
+ggplot(data = Anscombe, aes(x = x, y = y)) +
+  geom_point() +
+  facet_wrap(~ set)
+```
+
+<img src="francis.jpg" width="600px">
+
+
+These datasets have the same number of points, the same mean and standard deviation in both x and y, the same correlation, and the same regression line.
 
 
 
