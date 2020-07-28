@@ -107,7 +107,91 @@ ggplot(data = Anscombe, aes(x = x, y = y)) +
 
 These datasets have the same number of points, the same mean and standard deviation in both x and y, the same correlation, and the same regression line.
 
+### Spurious correlations
+Remarkable but nonsensical correlations are called "spurious."
 
+Statisticians must always be skeptical of potentially spurious correlations. Human beings are very good at seeing patterns in data, sometimes when the patterns themselves are actually just random noise.
 
+- `time`: Any time you see two variables linked over time, you should be skeptical of the role that time can play as a confounder.
 
+- `space`: Space can also be present in spurious correlations.  
+Colored maps, or choropleths, can be visually arresting ways of conveying information, but they can also reveal spurious correlations.
 
+- In other cases, it may not be so obvious what confounding variables are driving the spurious correlation.
+
+## Simple linear regression
+### Visualization of linear models
+**The "best" fit line**
+
+The simple linear regression model for a numeric response as a function of a numeric explanatory variable can be visualized on the corresponding scatterplot by a straight line. This is a "best fit" line that cuts through the data in a way that minimizes the distance between the line and the data points.
+
+The `geom_smooth()` function allows you to draw such models over a scatterplot of the data itself. This technique is known as visualizing the model in the *data space*. 
+
+The `method` argument to `geom_smooth()` allows you to specify what class of smooth model you want to see. Note that `geom_smooth()` also takes an `se` argument that controls the standard error, which we will ignore for now.
+
+```
+# method argument set to "lm," which stands for linear model
+# se argument set to "FALSE" or 0, to turn off gray shading (for the standard error associated with the line)
+
+ggplot(data = possum, aes(x = tailL, y = totalL)) +
+  geom_point() + geom_smooth(method = "lm", se = FALSE)
+```
+
+### Understanding linear models
+**Generic statistical model:**  
+response = f(explanatory) + noise
+
+**Generic linear model:**  
+response = intercept + (slope * explanatory) + noise  
+
+**Regression model:**  
+$Y = \beta_0 + \beta_1 \cdot X + \epsilon$
+
+$\epsilon \sim N(0, \sigma_\epsilon)$
+Understanding the specification of the noise term is crucial to thinking like a statistician. In a regression model, we specify that the distribution of the noise is normal, with mean 0 and a fixed standard deviation.
+
+- The part of the function aside from the noise term consists of a linear function that produces the fitted values. 
+
+These are usually denoted with *Y hat* (expected values of the response based on the model):  
+$\hat{Y} = \hat{\beta}_0 + \hat{\beta_1} \cdot X$
+
+- The residuals are the realization of the noise term:  
+*Residuals*: $e = Y - \hat{Y}$
+
+- $\epsilon$ and $e$ play analogous roles in the regression equation
+  - $\epsilon$ is an unknown, true quantity
+  - while $e$ is a known, estimate of that quantity
+
+**Fitting procedure**
+
+- Given $n$ observations of pars ($x_i, y_i$)...
+- Find $\hat{\beta}_0, \hat{\beta}_1$ that minimize $\sum_{i=1}^{n}e_i^2$
+
+*Least squares* procedure is a well-understood, relatively simple, deterministic process that can be computed efficiently. It will always return a unique solution, except in rare, unrealistic cases.
+
+- Easy, deterministic, unique solution
+- Residuals sum to zero
+- Line must pass through $(\bar{x},\bar{y})$ (denoting the average of x and y, respectively).
+- The regression slope and the correlation coefficient are closely related, proportional to one another.
+- Other criteria exist - just not in this course
+
+#### Key concepts
+- Y-hat is expected value given the corresponding value of X, it is our best guess for the true value of $y$ given that we know about $x$
+
+- Beta-hats are estimates of true, unknown betas
+
+- Residuals (e's) are estimates of true, unknown epsilons
+
+- "Error" may be misleading term: better, noise
+
+Y=b0+b1⋅X
+
+First, the slope can be defined as:
+
+b1=rX,Y⋅sY/sX
+
+b1 = cor(X,Y) ⋅ sd(Y) / sd(X)
+
+where rX,Y represents the correlation (`cor()`) of X and Y and sX and sY represent the standard deviation (`sd()`) of X and Y, respectively.
+
+Second, the point (x¯,y¯) is always on the least squares regression line, where x¯ and y¯ denote the average of x and y, respectively.
