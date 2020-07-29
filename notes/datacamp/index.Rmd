@@ -8,4 +8,4 @@ output:
   #bookdown::pdf_book: default
 ---
 
-# Datacamp {-}
+# Statistician with R {-}

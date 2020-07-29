@@ -147,20 +147,19 @@ response = intercept + (slope * explanatory) + noise
 **Regression model:**  
 $Y = \beta_0 + \beta_1 \cdot X + \epsilon$
 
-$\epsilon \sim N(0, \sigma_\epsilon)$
+1. $\epsilon \sim N(0, \sigma_\epsilon)$  
 Understanding the specification of the noise term is crucial to thinking like a statistician. In a regression model, we specify that the distribution of the noise is normal, with mean 0 and a fixed standard deviation.
 
-- The part of the function aside from the noise term consists of a linear function that produces the fitted values. 
-
+2. The part of the function aside from the noise term consists of a linear function that produces the fitted values.  
 These are usually denoted with *Y hat* (expected values of the response based on the model):  
 $\hat{Y} = \hat{\beta}_0 + \hat{\beta_1} \cdot X$
 
-- The residuals are the realization of the noise term:  
+3. The residuals are the realization of the noise term:  
 *Residuals*: $e = Y - \hat{Y}$
 
-- $\epsilon$ and $e$ play analogous roles in the regression equation
-  - $\epsilon$ is an unknown, true quantity
-  - while $e$ is a known, estimate of that quantity
+4. $\epsilon$ and $e$ play analogous roles in the regression equation
+  1. $\epsilon$ is an unknown, true quantity
+  2. while $e$ is a known, estimate of that quantity
 
 **Fitting procedure**
 
@@ -175,7 +174,8 @@ $\hat{Y} = \hat{\beta}_0 + \hat{\beta_1} \cdot X$
 - The regression slope and the correlation coefficient are closely related, proportional to one another.
 - Other criteria exist - just not in this course
 
-#### Key concepts
+**Key concepts**
+
 - Y-hat is expected value given the corresponding value of X, it is our best guess for the true value of $y$ given that we know about $x$
 
 - Beta-hats are estimates of true, unknown betas
@@ -184,14 +184,32 @@ $\hat{Y} = \hat{\beta}_0 + \hat{\beta_1} \cdot X$
 
 - "Error" may be misleading term: better, noise
 
-Y=b0+b1⋅X
+*Note:*
 
-First, the slope can be defined as:
+Recall $Y = b_0 + b_1 \cdot X$, 
 
-b1=rX,Y⋅sY/sX
+  - the slope can be defined as: $b_1 = r_{X,Y} \cdot \frac{S_Y}{S_X}$  
+  where $r_{X,Y}$ represents the correlation (`cor()`) of $X$ and $Y$ and $s_X$ and $s_Y$ represent the standard deviation (`sd()`) of $X$ and $Y$, respectively.
 
-b1 = cor(X,Y) ⋅ sd(Y) / sd(X)
+  - Second, the point $(\bar{x},\bar{y})$ is always on the least squares regression line, where $\bar{x}$ and $\bar{y}$ denote the average of $x$ and $y$, respectively.
 
-where rX,Y represents the correlation (`cor()`) of X and Y and sX and sY represent the standard deviation (`sd()`) of X and Y, respectively.
+### Regression vs. Regression to the mean
+- Regression: techniques for modeling a quantitative response
+- Types of regression models
+  - Least squares
+  - Weighted
+  - Generalized
+  - Nonparametric
+  - Ridge
+  - Bayesian
+  
+Galton's **"regression to the mean"** 均值回归:  
+Regression to the mean is a concept attributed to Sir Francis Galton. The basic idea is that extreme random observations will tend to be less extreme upon a second trial.
 
-Second, the point (x¯,y¯) is always on the least squares regression line, where x¯ and y¯ denote the average of x and y, respectively.
+> "Regression to the mean is so powerful that once-in-a-generation talent basically never sires once-in-a-generation talent. It explains why Michael Jordan’s sons were middling college basketball players and Jakob Dylan wrote two good songs. It is why there are no American parent-child pairs among Hall of Fame players in any major professional sports league."
+
+## Interpreting regression models
+When interpreting slope coefficients, one must pay careful attention to units and scales. Note that the units of the slope coefficient is the units of the response variable per unit of the explanatory variable.
+
+
+## Model fit
