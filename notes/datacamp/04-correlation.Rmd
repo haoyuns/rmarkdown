@@ -211,5 +211,70 @@ Regression to the mean is a concept attributed to Sir Francis Galton. The basic 
 ## Interpreting regression models
 When interpreting slope coefficients, one must pay careful attention to units and scales. Note that the units of the slope coefficient is the units of the response variable per unit of the explanatory variable.
 
+### The `lm` summary output
+An `lm` object contains a host of information about the regression model that you fit. There are various ways of extracting different pieces of information.
+
+The `coef()` function displays only the values of the coefficients.   
+Conversely, the `summary()` function displays not only that information, but a bunch of other information, including the associated standard error and p-value for each coefficient, the $R^2$, adjusted $R^2$, and the residual standard error. 
+
+The summary of an `lm` object in R is very similar to the output you would see in other statistical computing environments (e.g. Stata, SPSS, etc.)
+
+```
+# mod is an object of type "lm", it's not a data frame, a function, a matrix or a list.
+mod <- lm(uclaNew ~ amazNew, data = textbooks)
+class(mod)
+
+mod
+
+# Show the coefficients
+coef(mod)
+
+# Show the full output
+summary(mod)
+```
+
+### Fitted values and residuals
+Once you have fit a regression model, you are often interested in the fitted values ($\hat{y}_i$) and the residuals ($e_i$), where $i$ indexes the observations. Recall that:  
+$e_i = y_i− \hat{y}_i$
+
+The least squares fitting procedure guarantees that the mean of the residuals is zero (n.b., numerical instability may result in the computed values not being *exactly* zero). At the same time, the mean of the fitted values must equal the mean of the response variable.
+
+```
+# Accessing the fitted values and residuals
+fitted.values(mod)
+residuals(mod)
+```
+
+### Tidying your linear model
+As you fit a regression model, there are some quantities (e.g. $R^2$) that apply to the model as a whole, while others apply to each observation (e.g. $\hat{y}_i$). If there are several of these per-observation quantities, it is sometimes convenient to attach them to the original data as new variables.
+
+The `augment()` function from the `broom` package does exactly this. It takes a model object as an argument and returns a data frame that contains the data on which the model was fit, along with several quantities specific to the regression model, including the fitted values, residuals, leverage scores, and standardized residuals.
+
+```
+library(broom)
+augment(mod)
+
+    uclaNew amazNew .fitted .se.fit .resid   .hat     .sigma .cooksd
+1    27.67   27.95   34.44   1.460  -6.77105 0.01944 10.515 4.227e-03
+2    40.59   31.14   38.27   1.418   2.32413 0.01834 10.543 4.687e-04
+3    31.68   32.00   39.30   1.407  -7.61701 0.01806 10.507 4.955e-03
+4    16.00   11.52   14.74   1.721   1.25854 0.02700 10.546 2.059e-04
+```
+
+### Making predictions
+The `fitted.values()` function or the `augment()`-ed data frame provides us with the fitted values for the observations that were in the original data. However, once we have fit the model, we may want to compute expected values for observations that were *not* present in the data on which the model was fit. These types of predictions are called **out-of-sample**.
+
+`predict(lm, newdata)` will give fitted values of any new datat
+
+**Adding a regression line to a plot manually**
+
+There may still be times when we will want to add regression lines to our scatterplot manually. To do this, we will use the `geom_abline()` function, which takes `slope` and `intercept` arguments.
 
 ## Model fit
+- Sums of squared deviations, Sums of squared errors (SSE)
+
+- RMSE
+
+
+
+
