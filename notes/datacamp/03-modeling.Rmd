@@ -236,7 +236,7 @@ get_regression_points(model_price_1) %>%
 ```
 
 ### Assessing predictions with RMSE
-Root mean square error 均方根误差:
+Root mean squared error 均方根误差:
 
 ```
 # Mean squared error

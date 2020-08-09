@@ -271,10 +271,96 @@ The `fitted.values()` function or the `augment()`-ed data frame provides us with
 There may still be times when we will want to add regression lines to our scatterplot manually. To do this, we will use the `geom_abline()` function, which takes `slope` and `intercept` arguments.
 
 ## Model fit
-- Sums of squared deviations, Sums of squared errors (SSE)
+How far off the model is for a typical case? Recall that some of the residuals are positive, while others are negative. In fact, it is guaranteed by the least squares fitting procedure that the mean of the residuals is zero. 
 
-- RMSE
+Thus, it makes more sense to compute the square root of the mean squared residual or root mean squared error (*RMSE*). R calls this quantity the *residual standard error*.
+
+- SSE: Sums of squared errors
+  - meaning: a single number that captures how much our model missed by
+  - fallback: hard to interpret, since the units have been squared
+
+```
+mod_possum <- lm(totalL ~ tailL, data = possum)
+
+mod_possum %>% 
+  augment() %>%
+  summarize(
+    SSE = sum(.resid^2),
+    SSE_also = (n() - 1) * var(.resid))
+```
+
+- RMSE: Root mean squared error
+  - divide the sum of the squared residualsv(SSE) by the degrees of freedom (d.f.) in the model  
+  $RMSE = \sqrt{ \frac{\sum_i{e_i^2}}{d.f.} } = \sqrt{ \frac{SSE}{d.f.} }$
+  - meaning: the standard deviation of the residuals
+
+```
+library(broom)
+mod_possum <- lm(totalL ~ tailL, data = possum
+
+summary(mod_possum)
+
+# Recover the residuals from mod
+residuals(mod_possum)
+
+# Compute RMSE
+sqrt(sum(residuals(mod)^2) / df.residual(mod))
+```
+
+### Comparing model fits
+What would be nice is if we had a way to compare the quality of the fit that was unitless. To do so, it is helpful to think about a benchmark.
+
+**Null (average) model**:  
+for all observations...$\hat{y}_{null} = \bar{y}$
+
+Since we can always fit the null model, it serves as a baseline against which all other models will be compared.
+
+```
+# SST: SSE for the null model, the total sum of the squares
+# SST that is not explained by our model is the SSE
+
+mod_null <- lm(totalL ~ 1, data = possum)
+
+mod_null %>% 
+  augment(possum) %>%
+  summarize(SST = sum(.resid^2))
+
+# SSE, our model
+mod_possum <- lm(totalL ~ tailL, data = possum)
+
+mod_possum %>% 
+  augment() %>%
+  summarize(SSE = sum(.resid^2))
+```
+
+**Coefficient of determination (R squared)**
+
+$R^2 = 1 - \frac{SSE}{SST} = 1 - \frac{Var(e)}{Var(y)}$
+
+where $e$ is the vector of residuals and y is the response variable.
+
+This gives us the interpretation of $R^2$ as the percentage of the variability in the response that is explained by the model, since the residuals are the part of that variability that remains unexplained by the model.
+
+It is the most commonly cited measure of the quality of the fit of a regression model.
+
+```
+# Compute R-squared
+bdims_tidy %>%
+  summarize(var_y = var(wgt), var_e = var(.resid)) %>%
+  mutate(R_squared = 1 - var_e/var_y)
+```
 
 
+**Connection to correlation**
 
+- For least squared regression models with a single explanatory variable...  
 
+$r^2_{x,y} = R^2$
+
+#### Summary
+*Correlation* is strictly a bivariate quantity, it can only be between a single response and a single explanatory variable. However, *regression* is a much more flexible modeling framework.
+
+A model with a low R squared doesn't mean that you have a lousy model, but can still provide statistically significant insight into a complex problem. A model with a high R squared may be overfit or it may violate the conditions for inference.
+
+> Essentially, all models are wrong, but some are useful.
+> -- George Box
