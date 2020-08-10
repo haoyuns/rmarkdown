@@ -365,9 +365,7 @@ A model with a low R squared doesn't mean that you have a lousy model, but can s
 > Essentially, all models are wrong, but some are useful.
 > -- George Box
 
-#### Unusual points
-leverage and influence
-
+### Unusual points
 **Leverage**
 
 $h_i = \frac{1}{n} + $
@@ -406,10 +404,5 @@ Observations can be outliers for a number of different reasons. Statisticians mu
 
 Sometimes, a better model fit can be achieved by simply removing outliers and re-fitting the model. However, one must have strong justification for doing this. A desire to have a higher $R^2$ is not a good enough reason!
 
-- What is the justification? Not a valid data point?
+- **What is the justification?** Not a valid data point?
 - How does the scope of inference change?
-
-
-
-
-
