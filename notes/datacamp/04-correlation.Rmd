@@ -364,3 +364,52 @@ A model with a low R squared doesn't mean that you have a lousy model, but can s
 
 > Essentially, all models are wrong, but some are useful.
 > -- George Box
+
+#### Unusual points
+leverage and influence
+
+**Leverage**
+
+$h_i = \frac{1}{n} + $
+
+The *leverage* of an observation in a regression model is defined entirely in terms of the distance of that observation from the mean of the explanatory variable. 
+
+That is, observations close to the mean of the explanatory variable have low leverage, while observations far from the mean of the explanatory variable have high leverage. The y coordinate doesn't matter at all. **Points of high leverage may or may not be influential.**
+
+The `augment()` function from the `broom` package will add the leverage scores (`.hat`) to a model data frame.
+
+```
+# Rank points of high leverage
+mod %>%
+  augment() %>%
+  arrange(desc(.hat)) %>%
+  head()
+```
+
+**Influence via Cook's distance**
+
+As noted previously, observations of high leverage may or may not be influential. The influence of an observation depends not only on its leverage, **but also on the magnitude of its residual**. Recall that while leverage only takes into account the explanatory variable ($x$), the residual depends on the response variable ($y$) and the fitted value ($\hat{y}$ ).
+
+Influential points are likely to have high leverage and deviate from the general relationship between the two variables. We measure influence using *Cook's distance*, which incorporates both the leverage and residual of each observation.
+
+```
+# Rank influential points
+mod %>%
+  augment() %>%
+  arrange(desc(.cooksd)) %>%
+  head(6)
+```
+
+**Removing outliers**
+
+Observations can be outliers for a number of different reasons. Statisticians must always be careful—and more importantly, transparent—when dealing with outliers.
+
+Sometimes, a better model fit can be achieved by simply removing outliers and re-fitting the model. However, one must have strong justification for doing this. A desire to have a higher $R^2$ is not a good enough reason!
+
+- What is the justification? Not a valid data point?
+- How does the scope of inference change?
+
+
+
+
+
