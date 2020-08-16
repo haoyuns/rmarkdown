@@ -67,17 +67,13 @@ Read in raster data with `raster` package
 - formats: GeoTIFF, Esri grids, ENVI grids, ERDAS grids
 - read single-band rasters: `raster()`
 - read multi-band rasters: `brick()`
-- write raster data: `writeRaster()`
 
-```
-# Read in the tree canopy single-band raster
-canopy <- raster("canopy.tif")
-# Read in the manhattan Landsat image multi-band raster
-manhattan <- brick("manhattan.tif")
-```
 Once you read in raster data, they'll be stored as objects with the class RasterLayer or RasterBrick.
 
 ```
+canopy <- raster("canopy.tif")
+manhattan <- brick("manhattan.tif")
+
 # Get the class for the new objects
 class(canopy)
 [1] "RasterLayer"
@@ -95,9 +91,35 @@ nlayers(canopy)
 nlayers(manhattan)
 [1] 3
 ```
-<img src="raster.png" width="600">
+<img src="raster1.png" width="600">
+
+#### Note when importing rasters...
+Raster data can be very big depending on the extent and resolution (grid size). In order to deal with this, the `raster()` and `brick()` functions are designed to only read in the actual raster values as needed.
+
+Therefore, `raster()` and `brick()` do not read in raster values by default. To conserve memory, raster values are imported only when required.
+
+<img src="raster2.png" width="600">
+
+If you use the `head()` function, the raster package will read in only the values needed, not the full set of values.
+
+The raster values will be read in by default if you perform spatial analysis operations that require it, or you can read in the values from a raster manually with the function `getValues()`.
+
+- Use `inMemory()` to tell if the raster values have been read into R. It will return FALSE if the values are not in memory
+
+- Read the values with the `getValues()` function
 
 
+#### Other functions
+Instead of storing raster objects in data frames, the raster package stores spatial data in specially designed R classes that contain slots where the data and metadata are stored. The data and metadata can be accessed using a suite of functions. 
+
+- `extent()` to get the minimum and maximum X and Y coordinates of the raster
+- `ncell()` and `nlayers()` to get the total number of grid cells or layers, respectively
+- `crs()` to get the coordinate reference system
+- `writeRaster()` to write raster data
+
+#### Creating quick maps of your rasters with `plot()` and `plotRGB()`
+- use `plot()` for single-band rasters or to look at the individual layers in a multi-band raster
+- use `plotRGB()` to create a **true color** map of a multi-layered object
 
 
 
