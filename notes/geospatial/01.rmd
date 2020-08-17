@@ -122,7 +122,8 @@ Instead of storing raster objects in data frames, the raster package stores spat
 - use `plotRGB()` to create a **true color** map of a multi-layered object
 
 
-## Corrdinate reference system (CRS)
+## Preparing layers for spatial analysis
+### Corrdinate reference system (CRS)
 Vector and raster spatial data was created based on a specific CRS. Usually the spatial file has metadata defining the CRS, but sometimes there is not.
 
 **Projected vs unprojected CRS**
@@ -130,8 +131,7 @@ Vector and raster spatial data was created based on a specific CRS. Usually the 
 - An unprojected CRS uses latitude and longitude coordinates and references the earth as a three-dimensional object
 - A projected CRS uses X and Y coordinates as a two-dimensional representation of the earth
 
-**Print out the CRS**
-
+#### Print out the CRS
 - `sf` package: `st_crs()` prints out a vector object's CRS
 - `raster` package: `crs()` prints out a raster object's CRS
 
@@ -150,12 +150,11 @@ attr(,"class")
 [1] "crs"
 ```
 
-### Define CRS with EPSG or proj4string
+#### Define CRS with EPSG or proj4string
+You can use either an EPSG or proj4string to define the CRS. A CRS might have both but might only need one.
 
-- You can use either an EPSG or proj4string to define the CRS. A CRS might have both but might only need one
-- The EPSG code is a numeric representation of a CRS (e.g, 4326)
-- The proj4string is a full set of parameters spelled out in a string (e.g.,
-`+proj=longlat +ellps=WGS84 +no_defs`)
+- The **EPSG** code is a numeric representation of a CRS (e.g, 4326)
+- The **proj4string** is a full set of parameters spelled out in a string (e.g., `+proj=longlat +ellps=WGS84 +no_defs`)
 
 **With `st_crs()`**
 
@@ -169,14 +168,14 @@ attr(,"class")
 **For a raster define with crs()**  
 `crs(multiband) <- "+proj=utm +zone=18+datum=WGS84 +units=m +no_defs+ellps=WGS84 +towgs84=0,0,0"`
 
-### Change the CRS with `st_transform()` or `projectRaster()`
+#### Change the CRS with `st_transform()` or `projectRaster()`
+You mostly can't plot layers together if they don't have the same CRS.
+
 - Use `st_transform()` to change the CRS for vectors
   - Note that you need `asText = TRUE` to force the `crs()` function from raster to output the CRS as a string.
   
 - Use `projectRaster()` to change the CRS for rasters
   - Note that to use an EPSG with `projectRaster`, the syntax is `+init=epsg:32618`
-
-You mostly can't plot layers together if they don't have the same CRS.
 
 ```
 # Transform the CRS for vector shapes
@@ -191,6 +190,11 @@ singleband_prj <- projectRaster(singleband, crs = "+proj=utm +zone=18 +ellps=WGS
 singleband_prj <- projectRaster(singleband, crs = "+init=epsg:32618")
 ```
 
+### Manipulating vector layers
+
+
+
+### Manipulating raster layers
 
 
 
