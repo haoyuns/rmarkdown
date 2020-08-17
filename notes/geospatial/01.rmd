@@ -122,4 +122,55 @@ Instead of storing raster objects in data frames, the raster package stores spat
 - use `plotRGB()` to create a **true color** map of a multi-layered object
 
 
+## Corrdinate reference system (CRS)
+Vector and raster spatial data was created based on a specific CRS. Usually the spatial file has metadata defining the CRS, but sometimes there is not.
+
+**Projected vs unprojected CRS**
+
+- An unprojected CRS uses latitude and longitude coordinates and references the earth as a three-dimensional object
+- A projected CRS uses X and Y coordinates as a two-dimensional representation of the earth
+
+**Print out the CRS**
+
+- `sf` package: `st_crs()` prints out a vector object's CRS
+- `raster` package: `crs()` prints out a raster object's CRS
+
+```
+shape1 <- st_read("shape1.shp")
+st_crs(shape1)
+$epsg
+[1] 4326
+
+$proj4string
+[1] "+proj=longlat +ellps=WGS84 +no_defs"
+
+attr(,"class")
+[1] "crs"
+```
+
+### Define CRS with EPSG or proj4string**
+
+- You can use either an EPSG or proj4string to define the CRS. A CRS might have both but might only need one
+- The EPSG code is a numeric representation of a CRS (e.g, 4326)
+- The proj4string is a full set of parameters spelled out in a string (e.g.,
+"+proj=longlat +ellps=WGS84 +no_defs")
+
+**With `st_crs()`**
+
+- Define with the proj4string  
+`st_crs(shape2) <- "+proj=longlat +ellps=WGS84 +no_defs"`
+
+- Define with the EPSG code  
+`st_crs(shape2) <- 4236`
+
+
+**For a raster define with crs()**  
+`crs(multiband) <- "+proj=utm +zone=18+datum=WGS84 +units=m +no_defs+ellps=WGS84 +towgs84=0,0,0"`
+
+Change the CRS with `st_transform()` or `projectRaster()`
+- Use `st_transform()` to change the CRS for vectors
+- Use `projectRaster()` to change the CRS for rasters
+
+
+
 
