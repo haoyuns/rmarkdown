@@ -135,6 +135,8 @@ Vector and raster spatial data was created based on a specific CRS. Usually the 
 - `sf` package: `st_crs()` prints out a vector object's CRS
 - `raster` package: `crs()` prints out a raster object's CRS
 
+To determine if your object has a projected CRS, you can look at the first part of the result from `st_crs()` or `crs()` -- **if it begins with `+proj=longlat` then your CRS is unprojected**.
+
 ```
 shape1 <- st_read("shape1.shp")
 st_crs(shape1)
@@ -148,12 +150,12 @@ attr(,"class")
 [1] "crs"
 ```
 
-### Define CRS with EPSG or proj4string**
+### Define CRS with EPSG or proj4string
 
 - You can use either an EPSG or proj4string to define the CRS. A CRS might have both but might only need one
 - The EPSG code is a numeric representation of a CRS (e.g, 4326)
 - The proj4string is a full set of parameters spelled out in a string (e.g.,
-"+proj=longlat +ellps=WGS84 +no_defs")
+`+proj=longlat +ellps=WGS84 +no_defs`)
 
 **With `st_crs()`**
 
@@ -167,9 +169,27 @@ attr(,"class")
 **For a raster define with crs()**  
 `crs(multiband) <- "+proj=utm +zone=18+datum=WGS84 +units=m +no_defs+ellps=WGS84 +towgs84=0,0,0"`
 
-Change the CRS with `st_transform()` or `projectRaster()`
+### Change the CRS with `st_transform()` or `projectRaster()`
 - Use `st_transform()` to change the CRS for vectors
+  - Note that you need `asText = TRUE` to force the `crs()` function from raster to output the CRS as a string.
+  
 - Use `projectRaster()` to change the CRS for rasters
+  - Note that to use an EPSG with `projectRaster`, the syntax is `+init=epsg:32618`
+
+You mostly can't plot layers together if they don't have the same CRS.
+
+```
+# Transform the CRS for vector shapes
+shape1_prj <- st_transform(shape1, crs = 32618)
+shape1_prj <- st_transform(shape1, crs ="+proj=utm +zone=18 +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+
+# Transform CRS of one layer to match another layer
+shape1_prj <- st_transform(shape1, crs = crs(singleband, asText = TRUE))
+
+# Transform the CRS for a raster
+singleband_prj <- projectRaster(singleband, crs = "+proj=utm +zone=18 +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+singleband_prj <- projectRaster(singleband, crs = "+init=epsg:32618")
+```
 
 
 
