@@ -191,8 +191,135 @@ singleband_prj <- projectRaster(singleband, crs = "+init=epsg:32618")
 ```
 
 ### Manipulating vector layers
+One important difference between `dplyr` with and without spatial data is that the resulting data frames will include the geometry variable unless you explicitly drop it with `st_set_geometry(data, NULL)`. 
+
+**Dropping geometry from a data frame:**
+
+```
+tree_cnt <- count(trees, hood) %>%
+  st_set_geometry(NULL)
+```
+
+**Join spatial and non-spatial data with `inner_join()`**
+
+```
+# tree_sm is spatial, dat is non-spatial
+res <- inner_join(tree_sm, dat, by = c("hood" = "hood_dat"))
+```
+
+**Simplify with `st_simplify()`**
+
+- Compute the size in megabytes
+
+```
+library(pryr)
+object_size(county)
+489 kB
+```
+
+- Calculate number of vertices
+
+```
+# "cast" our polygons to bundles of points -- "MULTIPOINT" then count
+pts <- st_cast(county$geometry, "MULTIPOINT")
+sum(sapply(pts, length))
+[1] 57886
+```
+
+**`st_simplify()`**
+
+Tolerance controls simplification: bigger numbers mean more simplification, units are the units of the CRS. 
+
+Use the `preserveTopology = TRUE` argument so that borders stay aligned.
+
+`boro_simp <- st_simplify(boro, dTolerance = 500)`
 
 
+### Converting `sf` objects between `sp` and raw coordinates
+**Convert `sf` objects to `sp` with `as()`**
+
+The class for `sp` objects is `Spatial`.
+
+```
+# Our sf object
+polys <- st_read("polygons.shp")
+class(polys)
+[1] "sf"     "data.frame"
+
+# Convert to Spatial object
+polys_sp <- as(polys, Class = "Spatial")
+
+class(polys_sp)
+[1] "SpatialPolygonsDataFrame"
+attr(,"package")
+[1] "sp"
+```
+
+**Convert from `sp` to `sf` with `st_as_sf()`**
+
+```
+# Convert from sp to sf object
+polys_sf <- st_as_sf(polys_sp)
+
+class(polys_sf)
+[1] "sf"         "data.frame"
+```
+
+#### Converting to and from coordinates
+The `coords` argument specifies the coordinate columns and **must be in longitude,latitude or X, Y order**.
+
+```
+# Simple dataframe with coordinates
+pts <- data.frame(
+  ID = 1:2,
+  lon = c(-73, -72),
+  lat = c(41, 42)
+  )
+
+# Convert to an sf object
+pts <- st_as_sf(pts, coords = c("lon", "lat"))
+
+pts
+# Simple feature collection with 2 features and 1 field
+# geometry type:  POINT
+# dimension:      XY
+# bbox:           xmin: -73 ymin: 41 xmax: -72 ymax: 42
+# epsg (SRID):    NA
+# proj4string:    NA
+# ID       geometry
+# 1  1 POINT (-73 41)
+# 2  2 POINT (-72 42)
+```
+
+#### Specify the CRS with either a proj4string or a EPSG code
+
+```
+# WGS 84 with a proj4string
+st_as_sf(pts,
+  coords = c("lon", "lat"),
+  crs = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+  )
+```
+
+With long/lat you can probably use EPSG = 4326 (WGS 84)
+
+```
+# WGS 84 with an EPSG code
+st_as_sf(pts, coords = c("lon", "lat"), crs = 4326)
+```
+
+#### Write your points to a CSV with coordinates
+
+If you want to convert your `sf` point objects to a data frame with coordinates, you can use the `st_write()` function with a hidden argument.
+
+These are arguments associated with an external utility called GDAL, and so they're not in the R help.
+
+- Writing to other spatial formats like shapefiles is easy with `st_write()`
+- If you use `st_write()` with points and specify a CSV, coordinates won't be included
+- Use a "hidden" argument, `layer_options` to write coordinates  
+  `st_write(pts, "pts.csv", layer_options = "GEOMETRY=AS_XY")`
+
+Note that `st_write()` can also be used to write lines and polygons, but it wouldn't make sense to write these out with coordinates in the same format.
 
 ### Manipulating raster layers
 
