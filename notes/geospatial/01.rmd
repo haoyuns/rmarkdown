@@ -665,3 +665,98 @@ alt_ele <- overlay(elevation, multiplier, fun = f)
 Elevation values have been multiplied by either 1.25 or 0.75 depending on their location. Otherwise raster values are set to `NA`.
 
 <img src="raster4.png" width="600">
+
+## Plotting a map
+### With `ggplot2` package
+**Examples of the two basic layer types**
+
+- Geometric layers
+  - points: `geom_point()`
+  - lines: `geom_line()`
+  - histogram: `geom_histogram()`
+  - map: `geom_sf()`
+
+- Statistical layers
+  - smooths: `stat_smooth()`
+  - density: `stat_density()`
+
+**`geom_sf()`**
+
+The `geom_sf()` function operates like any other layer in `ggplot2` where you can link variables to aesthetics on the plot through the `aes()` function.
+
+In a mapping context this might mean, for example, creating a choropleth map by color coding the polygons based on a variable. If you leave off the aesthetic mapping, `geom_sf()` will map the geometry alone.
+
+```
+county <- st_transform(county, crs = 32618)
+ggplot(data = county, aes(fill = area)) +
+  geom_sf() +
+  scale_fill_gradient(low = "wheat1", high = "red")
+```
+
+### With 'tmap' package
+**`tmap` layers**
+
+- Polygons: `tm_polygons()`
+- Image raster: `tm_rgb()`
+- Lines: `tm_lines()`
+- Points: either `tm_bubbles()` or `tm_dots()`
+- Many others ...
+
+**Add layers**
+
+Initial plot setup function `tm_shape()`
+
+Add multiple layers (same data)
+```
+tm_shape(county) +
+  tm_polygons(col = "total_pop") + #color based on a variable
+  tm_bubbles(col = "forestgreen")
+```
+
+Add multiple layers (different data)
+```
+tm_shape(elevation) +
+  tm_raster() +
+  tm_shape(county) + 
+  tm_borders()
+```
+
+Stylize the map
+```
+# Style the tree density map
+tm_shape(neighborhoods) + 
+    tm_polygons("tree_density", palette = "Greens", 
+        style = "quantile", n = 7, 
+        title = "Trees per sq. KM")
+```
+
+Multiple maps in one with `tmap_arrange()`
+
+```
+map1 <- tm_shape(county) + tm_polygons(col = "total_pop")
+map2 <- tm_shape(elevation) + tm_raster()
+tmap_arrange(map1, map2, nrow = 1)
+```
+
+<img src="tmap1.png" width="600">
+
+```
+# Combine the aerial photo and neighborhoods into one map
+map1 <- tm_shape(manhattan) + 
+    tm_raster() + 
+    tm_shape(neighborhoods) + 
+    tm_borders(col = "black", lwd = 0.5, alpha = 0.5)
+
+# Create the second map of tree measures
+map2 <- tm_shape(neighborhoods, bbox = bbox(manhattan)) +
+    tm_polygons(c("tree_density", "avg_canopy"), 
+                style = "quantile",
+                palette = "Greens",
+                title = c("Tree Density", "Average Tree Canopy")) 
+
+# Combine the two maps into one
+# Use `asp = NA` to map height/width to match the bounding box
+tmap_arrange(map1, map2, asp = NA)
+```
+
+<img src="tmap2.png" width="600">
