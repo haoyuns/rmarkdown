@@ -94,6 +94,7 @@ ggplot(cars, aes(x = msrp)) +
 <img src="rlearning-hist1.png" width = 400>
 
 Higher dimension plots
+
 - Shape
 - Size
 - Color
