@@ -1,7 +1,7 @@
 SVG诞生于2001年，直到高分辨率设备的出现才被广泛注意和采用。
 
 ### SVG的根元素
-SVG的根元素有`width`、`height`、`viewBox`属性。
+SVG的根元素有`width`、`height`、`viewBox`属性。如果删除了宽高属性，SVG就会自动缩放填满容器。
 
 ```
 <svg width="198px" height="188px" viewBox="0 0 99 94">
@@ -43,3 +43,19 @@ viewBox = <min-x> <min-y> <width> <height>
 - [Method Draw](https://editor.method.ac/)
 - SVG 图标网站，https://icomoon.io/
 
+### SMIL动画
+同步多媒体集成语言 Synchronized Multimedia Integration Language，作为在XML文档中定义动画的方法。
+
+A Guide to SVG Animations (SMIL): https://css-tricks.com/guide-svg-animations-smil/
+
+#### 使用JavaScript添加SVG动画
+- Snap.svg: http://snapsvg.io/
+- GreenSock 动画平台：https://greensock.com/
+- Velocity.js: http://velocityjs.org/
+
+Animated line drawing in SVG: https://jakearchibald.com/2013/animated-line-drawing-svg/
+
+### 优化SVG
+压缩资源大小
+- SVGO: https://github.com/svg/svgo
+- SVGOMG: https://jakearchibald.github.io/svgomg/
