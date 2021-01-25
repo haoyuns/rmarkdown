@@ -62,3 +62,8 @@ A Guide to SVG Animations (SMIL): <https://css-tricks.com/guide-svg-animations-s
 
 -   SVGO: <https://github.com/svg/svgo>
 -   SVGOMG: <https://jakearchibald.github.io/svgomg/>
+
+自动生成动画：
+
+-   https://maxwellito.github.io/vivus-instant/
+-   https://app.svgator.com
