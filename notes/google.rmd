@@ -6,24 +6,88 @@ editor_options:
 
 ![](dajob.png){width="800"}
 
+### Thinking analytically
+
 **Data ecosystems**: made up of various elements that interact with one
 another in order to produce, manage, store, organize, analyze, and share
 data.
 
-#### **Data-driven decision making:**
+#### **Data analysis phases:**
 
 1.  **Ask** questions and define the problem
+
+    -   Define the problem you're trying to solve
+    -   Make sure you fully understand the **stakeholder's
+        expectations**
+    -   Focus on the actual problem and avoid any distractions
+    -   Collaborate with stakeholders and keep an open line of
+        communication
+    -   Take a step back and see the whole situation in **context**
+    -   [What are my stakeholders saying their problems are?]{.ul}
+    -   [Now that I've identified the issues, how can I help the
+        stakeholders resolve their questions?]{.ul}
+
 2.  **Prepare** data by collecting and storing the information
+
+    -   What **metrics** to measure
+    -   **Locate** data in your database
+    -   Create **security** measures to protect that data
+    -   [What do I need to figure out how to solve this problem?]{.ul}
+    -   [What research do I need to do?]{.ul}
+
 3.  **Process** data by cleaning and checking the information
+
+    -   Using spreadsheet functions to find **incorrectly** entered data
+    -   Using SQL functions to check for extra spaces
+    -   Removing **repeated** entries 
+    -   Determining if your data is biased
+    -   [What **data errors** or **inaccuracies** might get in my way of
+        getting the best possible answer to the problem I am trying to
+        solve?]{.ul}
+    -   [How can I clean my data so the information I have is more
+        consistent?]{.ul}
+
 4.  **Analyze** data to find patterns, relationships, and trends
+
+    -   Perform calculations
+    -   Combine data from multiple sources
+    -   Create tables with your results
+    -   [What story is my data telling me?]{.ul}
+    -   [How will my data help me solve this problem?]{.ul}
+    -   [Who needs my company's product or service? What type of person
+        is most likely to use it?]{.ul}
+
 5.  **Share** data with your audience
+
+    -   Make better decisions
+    -   Make more informed decisions
+    -   Lead to stronger outcomes
+    -   Successfully communicate your findings
+    -   [How can I make what I present to the stakeholders engaging and
+        easy to understand?]{.ul}
+    -   [What would help me understand this if I were the
+        listener?]{.ul}
+
 6.  **Act** on the data and use the analysis results.
 
-To get the most out of data-driven decision-making, it's important to
-include insights from people who are familiar with the business problem.
-These people are called **subject matter experts**, and they have the
-ability to look at the results of data analysis and identify any
-inconsistencies, make sense of gray areas, and eventually validate
+    -   [How can I use the feedback I received during the share phase
+        (step 5) to actually meet the shareholder's needs and
+        expectations?]{.ul}
+
+These six steps can help you to break the data analysis process into
+smaller, manageable parts, which is called **structured thinking**. This
+process involves four basic activities:
+
+1.  Recognizing the current problem or situation
+2.  Organizing available information 
+3.  Revealing gaps and opportunities
+4.  Identifying your options
+
+To get the most out of **data-driven decision-making**, it's important
+to include insights from people who are familiar with the business
+problem. These people are called **subject matter experts**, and they
+have the ability to look at the results of data analysis and identify
+any inconsistencies, make sense of gray areas, and eventually validate
 choices being made.
 
 ![](daprocess.png){width="800"}
@@ -37,12 +101,16 @@ Five key skills in analytical thinking:
 
 1.  **Curiosity** - a desire to know more about something, asking the
     right questions
+
 2.  **Understanding context** - understanding where information fits
     into the "big picture"
+
 3.  **Having a technical mindset** - breaking big things into smaller
     steps
+
 4.  **Data design** - thinking about how to organize data and
     information
+
 5.  **Data strategy** - thinking about the people, processes, and tools
     used in data analysis
 
@@ -93,17 +161,52 @@ important. Some common questions are:
 
 -   **Security**: Who should have access to the information?
 
+### Asking questions
+
 #### SMART questions
 
 -   **Specific**: Questions are simple, significant, and focused on a
     single topic or a few closely related ideas.
+
 -   **Measurable**: Questions can be quantified and assessed.
+
 -   **Action-oriented**: Questions encourage change.
+
 -   **Relevant**: Questions matter, are important, and have significance
     to the problem you're trying to solve.
+
 -   **Time-bound**: Questions specify the time to be studied.
 
-When Creating questions:
+![](dsmart.png){width="800"}
+
+#### Things to avoid when asking questions
+
+Questions should be **open-ended.** This is the best way to get
+responses that will help you accurately qualify or disqualify potential
+solutions to your specific problem. 
+
+Now, here are some types of questions that you should try to avoid as a
+data analyst:
+
+**Leading questions**: questions that only have a particular response
+
+-   [Example]{.ul}: *"This product is too expensive, isn't it?"*
+
+**Closed-ended questions**: questions that ask for a one-word or brief
+response only
+
+-   [Example]{.ul}: *"How was the customer trial?"*
+
+**Vague questions:** questions that aren't specific or don't provide
+context
+
+-   [Example]{.ul}: *"Does that tool work for you?"*
+
+A better question might be, "When it comes to data entry, how much time
+does the tool save you?" This question gives context (data entry) and
+helps frame responses that are measurable (time).
+
+**When Creating questions:**
 
 -   Avoid technical jargon.
 -   Prioritize your questions: Ask the most important and impactful
@@ -128,13 +231,24 @@ For example, if we had a conversation with an ice cream shop about
 collecting data on customer flavor preferences, our notes might appear
 something like this:
 
--   Project: Collect customer flavor preference data.
--   Overall business goal: Use data to create more popular flavors.
--   Two data sources: Cash register receipts and completed customer
+-   **Project**: Collect customer flavor preference data.
+-   Overall **business goal**: Use data to create more popular flavors.
+-   Two **data sources**: Cash register receipts and completed customer
     surveys (email).
--   Target completion date: Q2
--   To do: Call back later and speak with the manager about the location
-    of survey data.
+-   Target **completion date**: Q2
+-   **To do**: Call back later and speak with the manager about the
+    location of survey data.
+
+#### Problem Types
+
+Data analysts typically work with six problem types:
+
+1.  Making predictions
+2.  Categorizing things
+3.  Spotting something unusual
+4.  Identifying themes
+5.  Discovering connections
+6.  Finding patterns
 
 #### Types of dashboards
 
@@ -144,6 +258,116 @@ something like this:
     goals
 3.  **Analytical**: Consists of the datasets and the mathematics used in
     these sets
+
+#### Data cycle for spreadsheets
+
+-   **Plan** for the users who will work within a spreadsheet by
+    developing organizational standards. This can mean [formatting]{.ul}
+    your cells, the headings you choose to highlight, the color scheme,
+    and the way you [order]{.ul} your data points. When you take the
+    time to set these standards, you will improve communication, ensure
+    consistency, and help people be more efficient with their time.
+
+-   **Capture** data by the source by [connecting]{.ul} spreadsheets to
+    other data sources, such as an online survey application or a
+    database. This data will automatically be updated in the
+    spreadsheet. That way, the information is always as [current]{.ul}
+    and accurate as possible.
+
+-   **Manage** different kinds of data with a spreadsheet. This can
+    involve [storing, organizing, filtering, and updating]{.ul}
+    information. Spreadsheets also let you decide who can [access]{.ul}
+    the data, how the information is shared, and how to keep your data
+    [safe and secure]{.ul}. 
+
+-   **Analyze** data in a spreadsheet to help make better decisions.
+    Some of the most common spreadsheet analysis tools include formulas
+    to aggregate data or create reports, and pivot tables for clear,
+    easy to understand visuals. 
+
+-   **Archive** any spreadsheet that you don't use often, but might need
+    to [reference later]{.ul} with built-in tools. This is especially
+    useful if you want to store historical data before it gets updated. 
+
+-   **Destroy** your spreadsheet when you are certain that you will
+    never need it again, if you have better backup copies, or for legal
+    or security reasons. Keep in mind, lots of businesses are required
+    to follow certain rules or have measures in place to make sure data
+    is destroyed properly.
+
+#### Working with stakeholders
+
+**Stakeholders** are people who have invested time, interest, and
+resources into the projects that you are working on.
+
+There are three common stakeholder groups that you might find yourself
+working with: the executive team, the customer-facing team, and the data
+science team.
+
+![](ddomain.png){width="800"}\
+
+#### Leading great meetings
+
+1.  **Before the meeting**
+
+If you are organizing the meeting, you will probably talk about the
+data. Before the meeting:
+
+-   **Identify your objective**. Establish the purpose, goals, and
+    desired outcomes of the meeting, including any questions or requests
+    that need to be addressed.
+
+-   Acknowledge participants and keep them involved with different
+    points of view and experiences with the data, the project, or the
+    business.
+
+-   Organize the data to be presented. You might need to turn raw data
+    into accessible formats or create data visualizations.
+
+-   Prepare and distribute an agenda. We will go over this next.
+
+2.  **Crafting a compelling agenda**
+
+Here are the basic parts your agenda should include: 
+
+-   Meeting start and end time
+-   Meeting location (including information to participate remotely, if
+    that option is available)
+-   Objectives
+-   Background material or data the participants should review
+    beforehand
+
+3.  **Sharing your agenda ahead of time**
+
+After writing your agenda, it's time to share it with the invitees.
+Sharing the agenda with everyone ahead of time helps them understand the
+meeting goals and prepare questions, comments, or feedback.
+
+4.  **During the meeting**
+
+As the leader of the meeting, it's your job to guide the data
+discussion. With everyone well informed of the meeting plan and goals,
+you can follow these steps to avoid any distractions:
+
+-   Make introductions (if necessary) and review key messages
+-   Present the data
+-   Discuss observations, interpretations, and implications of the data
+-   Take notes during the meeting
+-   Determine and summarize next steps for the group 
+
+5.  **After the meeting**
+
+To keep the project and everyone aligned, prepare and distribute a brief
+recap of the meeting with next steps that were agreed upon in the
+meeting. You can even take it a step further by asking for feedback from
+the team.
+
+-   Distribute any notes or data
+-   Confirm next steps and timeline for additional actions
+-   Ask for feedback (this is an effective way to figure out if you
+    missed anything in your recap)
+
+### Preparing data
 
 #### Data formats
 
@@ -216,3 +440,5 @@ can be supplemented with ER diagrams, as both serve slightly different
 purpose.
 
 ![](https://dataedo.com/asset/img/blog/sample_data_dictionary.png)
+
+Reference: <https://dataedo.com/blog/basic-data-modeling-techniques>
