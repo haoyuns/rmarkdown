@@ -176,3 +176,43 @@ as a blueprint of a house.
     was built. By this stage, you are laying out how each database will
     be put in place and how the databases, applications, and features
     will interact in specific detail.
+
+![](dmodeling.png){width="800"}
+
+Reference:
+<https://www.1keydata.com/datawarehousing/data-modeling-levels.html>
+
+**Basic data modeling techniques:**
+
+-   ER Diagrams
+-   UML Class Diagrams
+-   a Data Dictionary
+
+1.  **Entity-Relationship modeling** is a default technique for modeling
+    and the design of relational (traditional) databases.
+
+**ERDs** work well if you want to design a relational (classic)
+database, Excel databases or CSV files. Basically, any kind of tabular
+data. They work well for visualization of database schemas and
+communication of top-level view of data.
+
+![](https://dataedo.com/asset/img/blog/dataedo_sample_erd.png)
+
+2.  **UML (Unified Modeling Language)** is a standardized family of
+    notations for modeling and design of information systems.
+
+You can use class diagrams to design a tabular data (such as in RDBMS),
+but were designed and are used mostly for object-oriented programs (such
+as Java or C\#).
+
+![](https://dataedo.com/asset/img/blog/uml_class_diagram.png)
+
+3.  **Data dictionaries** are a tabular definition/representation of
+    data assets. Data dictionary is an inventory of data sets/tables
+    with the list of their attributes/columns.
+
+Data dictionary is suitable as detailed specification of data assets and
+can be supplemented with ER diagrams, as both serve slightly different
+purpose.
+
+![](https://dataedo.com/asset/img/blog/sample_data_dictionary.png)
