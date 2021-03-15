@@ -1,10 +1,10 @@
 <img src="dajob.png" width="800"/>
 
-### Thinking analytically
+## Thinking analytically
 
 **Data ecosystems**: made up of various elements that interact with one another in order to produce, manage, store, organize, analyze, and share data.
 
-#### **Data analysis phases:**
+### **Data analysis phases:**
 
 1.  **Ask** questions and define the problem
 
@@ -66,7 +66,7 @@ To get the most out of **data-driven decision-making**, it's important to includ
 
 <img src="daprocess.png" width="800"/>
 
-#### **Analytical thinking**
+### **Analytical thinking**
 
 involves identifying and defining a problem and then solving it by using data in an organized, step-by-step manner.
 
@@ -211,7 +211,7 @@ There are three common stakeholder groups that you might find yourself working w
 
 <img src="ddomain.png" width="800"/>
 
-#### Leading great meetings
+#### Lead great meetings
 
 1.  **Before the meeting**
 
@@ -225,7 +225,7 @@ If you are organizing the meeting, you will probably talk about the data. Before
 
 -   Prepare and distribute an agenda. We will go over this next.
 
-1.  **Crafting a compelling agenda**
+2.  **Crafting a compelling agenda**
 
 Here are the basic parts your agenda should include: 
 
@@ -234,11 +234,11 @@ Here are the basic parts your agenda should include: 
 -   Objectives
 -   Background material or data the participants should review beforehand
 
-1.  **Sharing your agenda ahead of time**
+3.  **Sharing your agenda ahead of time**
 
 After writing your agenda, it's time to share it with the invitees. Sharing the agenda with everyone ahead of time helps them understand the meeting goals and prepare questions, comments, or feedback.
 
-1.  **During the meeting**
+4.  **During the meeting**
 
 As the leader of the meeting, it's your job to guide the data discussion. With everyone well informed of the meeting plan and goals, you can follow these steps to avoid any distractions:
 
@@ -248,7 +248,7 @@ As the leader of the meeting, it's your job to guide the data discussion. With e
 -   Take notes during the meeting
 -   Determine and summarize next steps for the group 
 
-1.  **After the meeting**
+5.  **After the meeting**
 
 To keep the project and everyone aligned, prepare and distribute a brief recap of the meeting with next steps that were agreed upon in the meeting. You can even take it a step further by asking for feedback from the team.
 
