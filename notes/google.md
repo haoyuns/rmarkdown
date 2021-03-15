@@ -94,7 +94,7 @@ The five key aspects to analytical thinking:
 
 **Gap analysis**: lets you examine and evaluate how a process works currently in order to get where you want to be in the future. The general approach to gap analysis is understanding where you are now compared to where you want to be.
 
-#### **Data life cycle:**
+### **Data life cycle:**
 
 -   **Plan** - What plans and decisions do you need to make? What data do you need to answer your question?
 -   **Capture** - Where does your data come from? How will you get it?
@@ -115,9 +115,9 @@ The type of questions you ask as you begin this "deep dive" are very important. 
 
 -   **Security**: Who should have access to the information?
 
-### Asking questions
+## Asking questions
 
-#### SMART questions
+### SMART questions
 
 -   **Specific**: Questions are simple, significant, and focused on a single topic or a few closely related ideas.
 
@@ -131,7 +131,7 @@ The type of questions you ask as you begin this "deep dive" are very important. 
 
 <img src="dsmart.png" width="800"/>
 
-#### Things to avoid when asking questions
+### Things to avoid when asking questions
 
 Questions should be **open-ended.** This is the best way to get responses that will help you accurately qualify or disqualify potential solutions to your specific problem. 
 
@@ -172,7 +172,7 @@ For example, if we had a conversation with an ice cream shop about collecting da
 -   Target **completion date**: Q2
 -   **To do**: Call back later and speak with the manager about the location of survey data.
 
-#### Problem Types
+### Problem Types
 
 Data analysts typically work with six problem types:
 
@@ -183,13 +183,13 @@ Data analysts typically work with six problem types:
 5.  Discovering connections
 6.  Finding patterns
 
-#### Types of dashboards
+### Types of dashboards
 
 1.  **Strategic**: Focuses on long term goals and strategies at the highest level of metrics
 2.  **Operational**: Short-term performance tracking and intermediate goals
 3.  **Analytical**: Consists of the datasets and the mathematics used in these sets
 
-#### Data cycle for spreadsheets
+### Data cycle for spreadsheets
 
 -   **Plan** for the users who will work within a spreadsheet by developing organizational standards. This can mean formatting your cells, the headings you choose to highlight, the color scheme, and the way you order your data points. When you take the time to set these standards, you will improve communication, ensure consistency, and help people be more efficient with their time.
 
@@ -203,7 +203,7 @@ Data analysts typically work with six problem types:
 
 -   **Destroy** your spreadsheet when you are certain that you will never need it again, if you have better backup copies, or for legal or security reasons. Keep in mind, lots of businesses are required to follow certain rules or have measures in place to make sure data is destroyed properly.
 
-#### Working with stakeholders
+### Working with stakeholders
 
 **Stakeholders** are people who have invested time, interest, and resources into the projects that you are working on.
 
@@ -211,7 +211,7 @@ There are three common stakeholder groups that you might find yourself working w
 
 <img src="ddomain.png" width="800"/>
 
-#### Lead great meetings
+### Lead great meetings
 
 1.  **Before the meeting**
 
@@ -256,9 +256,9 @@ To keep the project and everyone aligned, prepare and distribute a brief recap o
 -   Confirm next steps and timeline for additional actions
 -   Ask for feedback (this is an effective way to figure out if you missed anything in your recap)
 
-### Preparing data
+## Preparing data
 
-#### Data formats
+### Data formats
 
 -   Primary vs. Secondary
 -   Internal vs. External
@@ -271,7 +271,7 @@ To keep the project and everyone aligned, prepare and distribute a brief recap o
 
 <img src="dcollection.png" width="800"/>
 
-#### **Data modeling**
+### **Data modeling**
 
 Data modeling is the process of creating diagrams that visually represent how data is organized and structured. These visual representations are called data models. You can think of data modeling as a blueprint of a house.
 
@@ -297,13 +297,13 @@ Reference: <https://www.1keydata.com/datawarehousing/data-modeling-levels.html>
 
 ![](https://dataedo.com/asset/img/blog/dataedo_sample_erd.png)
 
-1.  **UML (Unified Modeling Language)** is a standardized family of notations for modeling and design of information systems.
+2.  **UML (Unified Modeling Language)** is a standardized family of notations for modeling and design of information systems.
 
 You can use class diagrams to design a tabular data (such as in RDBMS), but were designed and are used mostly for object-oriented programs (such as Java or C\#).
 
 ![](https://dataedo.com/asset/img/blog/uml_class_diagram.png)
 
-1.  **Data dictionaries** are a tabular definition/representation of data assets. Data dictionary is an inventory of data sets/tables with the list of their attributes/columns.
+3.  **Data dictionaries** are a tabular definition/representation of data assets. Data dictionary is an inventory of data sets/tables with the list of their attributes/columns.
 
 Data dictionary is suitable as detailed specification of data assets and can be supplemented with ER diagrams, as both serve slightly different purpose.
 
@@ -311,22 +311,22 @@ Data dictionary is suitable as detailed specification of data assets and can be 
 
 Reference: <https://dataedo.com/blog/basic-data-modeling-techniques>
 
-#### Data bias
+### Data bias
 
--   Observer bias
+-   **Observer** bias
 
     -   sometimes referred to as experimenter bias or research bias
     -   the tendency for different people to observe things differently
 
--   Interpretation bias
+-   **Interpretation** bias
 
     -   the tendency to always interpret ambiguous situations in a positive, or negative way
 
--   Confirmation bias
+-   **Confirmation** bias
 
     -   the tendency to search for, or interpret information in a way that confirms preexisting beliefs
 
-#### Good data
+### Good data
 
 Who created the data set? Is it part of a credible organization?When was the data last refreshed? If you have original data from a reliable organization and it's comprehensive, current, and cited, it **ROCCC**s!
 
@@ -336,7 +336,7 @@ Who created the data set? Is it part of a credible organization?When was the dat
 -   Current
 -   Cited
 
-#### Data ethics
+### Data ethics
 
 Ethics refers to well-founded **standards of right and wrong** that prescribe what humans ought to do, usually in terms of rights, obligations, benefits to society, fairness, or specific virtues.
 
@@ -363,7 +363,7 @@ Aspects of data ethics:
 
 -   **Openness**
 
-#### Data privacy
+### Data privacy
 
 Privacy means preserving a data subject's information and activity any time a data transaction occurs.
 
@@ -385,7 +385,7 @@ Here is a list of data that is often anonymized:
 -   Photographs
 -   Account numbers
 
-#### Open data
+### Open data
 
 In data analytics, **open data** is part of **data ethics,** which has to do with using data ethically. **Openness** refers to free access, usage, and sharing of data. But for data to be considered open, it has to be:
 
@@ -403,11 +403,11 @@ In data analytics, **open data** is part of **data ethics,** which has to do wit
 
 -   Be self-reflect and understand what it is that you're doing and the impact that it has
 
-### Databases
+## Databases
 
 A **normalized** database is a database in which only related data is stored in each table. The main idea behind **database normalization** is that a table should be about a specific topic and only include supporting related data.
 
-#### Database structures using schemas
+### Database structures using schemas
 
 Relational databases can also be organized in different ways according to schemas. A **schema** is a way of describing how something is organized.
 
