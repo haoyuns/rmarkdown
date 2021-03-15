@@ -28,7 +28,7 @@
 
     -   Using spreadsheet functions to find **incorrectly** entered data
     -   Using SQL functions to check for extra spaces
-    -   Removing **repeated** entries 
+    -   Removing **repeated** entries
     -   Determining if your data is biased
     -   What **data errors** or **inaccuracies** might get in my way of getting the best possible answer to the problem I am trying to solve?
     -   How can I clean my data so the information I have is more consistent?
@@ -55,10 +55,12 @@
 
     -   How can I use the feedback I received during the share phase (step 5) to actually meet the shareholder's needs and expectations?
 
+#### Structured thinking
+
 These six steps can help you to break the data analysis process into smaller, manageable parts, which is called **structured thinking**. This process involves four basic activities:
 
 1.  Recognizing the current problem or situation
-2.  Organizing available information 
+2.  Organizing available information
 3.  Revealing gaps and opportunities
 4.  Identifying your options
 
@@ -133,7 +135,7 @@ The type of questions you ask as you begin this "deep dive" are very important. 
 
 ### Things to avoid when asking questions
 
-Questions should be **open-ended.** This is the best way to get responses that will help you accurately qualify or disqualify potential solutions to your specific problem. 
+Questions should be **open-ended.** This is the best way to get responses that will help you accurately qualify or disqualify potential solutions to your specific problem.
 
 Now, here are some types of questions that you should try to avoid as a data analyst:
 
@@ -151,14 +153,14 @@ Now, here are some types of questions that you should try to avoid as a data ana
 
 A better question might be, "When it comes to data entry, how much time does the tool save you?" This question gives context (data entry) and helps frame responses that are measurable (time).
 
-**When Creating questions:**
+#### **When Creating questions**
 
 -   Avoid technical jargon.
 -   Prioritize your questions: Ask the most important and impactful questions first to save time.
 -   Make your time count: Stay on subject during the conversation.
 -   Clarify your understanding: To avoid confusion, briefly summarizing the given answers to make sure you understood it correctly. This will go a long way in helping you avoid mistakes.
 
-Take good notes:
+#### Take good notes
 
 -   **Facts**: Any concrete piece of information is usually worth writing down. Dates, times, names, and other specifics that pop up.
 -   **Context**: Facts without context are useless. Note any relevant details that are needed in order to understand the information you gather.
@@ -189,17 +191,17 @@ Data analysts typically work with six problem types:
 2.  **Operational**: Short-term performance tracking and intermediate goals
 3.  **Analytical**: Consists of the datasets and the mathematics used in these sets
 
-### Data cycle for spreadsheets
+#### Data cycle for spreadsheets
 
 -   **Plan** for the users who will work within a spreadsheet by developing organizational standards. This can mean formatting your cells, the headings you choose to highlight, the color scheme, and the way you order your data points. When you take the time to set these standards, you will improve communication, ensure consistency, and help people be more efficient with their time.
 
 -   **Capture** data by the source by connecting spreadsheets to other data sources, such as an online survey application or a database. This data will automatically be updated in the spreadsheet. That way, the information is always as current and accurate as possible.
 
--   **Manage** different kinds of data with a spreadsheet. This can involve storing, organizing, filtering, and updating information. Spreadsheets also let you decide who can access the data, how the information is shared, and how to keep your data safe and secure. 
+-   **Manage** different kinds of data with a spreadsheet. This can involve storing, organizing, filtering, and updating information. Spreadsheets also let you decide who can access the data, how the information is shared, and how to keep your data safe and secure.
 
--   **Analyze** data in a spreadsheet to help make better decisions. Some of the most common spreadsheet analysis tools include formulas to aggregate data or create reports, and pivot tables for clear, easy to understand visuals. 
+-   **Analyze** data in a spreadsheet to help make better decisions. Some of the most common spreadsheet analysis tools include formulas to aggregate data or create reports, and pivot tables for clear, easy to understand visuals.
 
--   **Archive** any spreadsheet that you don't use often, but might need to reference later with built-in tools. This is especially useful if you want to store historical data before it gets updated. 
+-   **Archive** any spreadsheet that you don't use often, but might need to reference later with built-in tools. This is especially useful if you want to store historical data before it gets updated.
 
 -   **Destroy** your spreadsheet when you are certain that you will never need it again, if you have better backup copies, or for legal or security reasons. Keep in mind, lots of businesses are required to follow certain rules or have measures in place to make sure data is destroyed properly.
 
@@ -211,7 +213,7 @@ There are three common stakeholder groups that you might find yourself working w
 
 <img src="ddomain.png" width="800"/>
 
-### Lead great meetings
+#### Lead great meetings
 
 1.  **Before the meeting**
 
@@ -227,7 +229,7 @@ If you are organizing the meeting, you will probably talk about the data. Before
 
 2.  **Crafting a compelling agenda**
 
-Here are the basic parts your agenda should include: 
+Here are the basic parts your agenda should include:
 
 -   Meeting start and end time
 -   Meeting location (including information to participate remotely, if that option is available)
@@ -246,7 +248,7 @@ As the leader of the meeting, it's your job to guide the data discussion. With e
 -   Present the data
 -   Discuss observations, interpretations, and implications of the data
 -   Take notes during the meeting
--   Determine and summarize next steps for the group 
+-   Determine and summarize next steps for the group
 
 5.  **After the meeting**
 
@@ -260,12 +262,12 @@ To keep the project and everyone aligned, prepare and distribute a brief recap o
 
 ### Data formats
 
--   Primary vs. Secondary
--   Internal vs. External
--   Continuous vs. Discrete
--   Qualitative vs. Quantitative
--   Nominal vs. Ordinal
--   Structured vs. Unstructured
+-   Primary vs.Secondary
+-   Internal vs.External
+-   Continuous vs.Discrete
+-   Qualitative vs.Quantitative
+-   Nominal vs.Ordinal
+-   Structured vs.Unstructured
 
 <img src="dformat.png" width="800"/>
 
@@ -275,7 +277,7 @@ To keep the project and everyone aligned, prepare and distribute a brief recap o
 
 Data modeling is the process of creating diagrams that visually represent how data is organized and structured. These visual representations are called data models. You can think of data modeling as a blueprint of a house.
 
-**Levels of data modeling**:
+#### **Levels of data modeling**
 
 1.  **Conceptual** data modeling gives you a high-level view of your data structure, such as how you want data to interact across an organization
 2.  **Logical** data modeling focuses on the technical details of the model such as relationships, attributes, and entities.
@@ -285,7 +287,7 @@ Data modeling is the process of creating diagrams that visually represent how da
 
 Reference: <https://www.1keydata.com/datawarehousing/data-modeling-levels.html>
 
-**Basic data modeling techniques:**
+**Basic data modeling techniques**
 
 -   ER Diagrams
 -   UML Class Diagrams
@@ -340,7 +342,7 @@ Who created the data set? Is it part of a credible organization?When was the dat
 
 Ethics refers to well-founded **standards of right and wrong** that prescribe what humans ought to do, usually in terms of rights, obligations, benefits to society, fairness, or specific virtues.
 
-Aspects of data ethics:
+#### Aspects of data ethics
 
 -   **Ownership**
 
@@ -363,7 +365,7 @@ Aspects of data ethics:
 
 -   **Openness**
 
-### Data privacy
+#### Data privacy
 
 Privacy means preserving a data subject's information and activity any time a data transaction occurs.
 
@@ -373,7 +375,7 @@ Privacy means preserving a data subject's information and activity any time a da
 -   ability to give consent to use our data
 -   legal right to access our data
 
-Here is a list of data that is often anonymized:
+**Here is a list of data that is often anonymized:**
 
 -   Telephone numbers
 -   Names
@@ -385,7 +387,7 @@ Here is a list of data that is often anonymized:
 -   Photographs
 -   Account numbers
 
-### Open data
+#### Open data
 
 In data analytics, **open data** is part of **data ethics,** which has to do with using data ethically. **Openness** refers to free access, usage, and sharing of data. But for data to be considered open, it has to be:
 
@@ -395,13 +397,15 @@ In data analytics, **open data** is part of **data ethics,** which has to do wit
 
 **PII and licensing, third party data, and privacy**
 
-**Third party data** is collected by an entity that doesn't have a direct relationship with the data. For example, third parties might collect information about visitors to a certain website. Doing this lets these third parties create "audience profiles," which helps them better understand user behavior, and target them with more effective advertising. 
+**Second party data** is data that's collected by a group directly from its audience and then sold. Third party data doesn't come from inside your own business
+
+**Third party data** is collected by an entity that doesn't have a direct relationship with the data. For example, third parties might collect information about visitors to a certain website. Doing this lets these third parties create "audience profiles," which helps them better understand user behavior, and target them with more effective advertising.
 
 **Personal Identifiable Information (PII)** is data that is reasonably likely to identify a person and make information known about them. We all want to keep this type of information about ourselves private. So it is important to find a balance between privacy and openness in public data.
 
-**Ethical data use:**
+**Ethical data use**
 
--   Be self-reflect and understand what it is that you're doing and the impact that it has
+-   Be self-reflect and understand what it is that you're doing and the impact that it has.
 
 ## Databases
 
@@ -415,6 +419,51 @@ Schemas are useful when you are learning about a new data set or designing a rel
 
 Two commonly used schemas are star schemas and snowflake schemas.
 
--   **星型模型 Star schema:** A **star schema** is a schema with one or more fact tables referencing any number of dimension tables. As its name suggests, this schema is shaped like a star. You can also imagine the fact table as the sun at the center of a solar system, with the dimension tables as the planets orbiting the sun. By design, star schemas let data analysts process data and get results from a database quickly. This type of schema is **best for high-scale information delivery** because it makes read output more efficient.
+-   **星型模型 Star schema:** A **star schema** is a schema with one or more fact tables referencing any number of dimension tables. As its name suggests, this schema is shaped like a star. You can also imagine the fact table as the sun at the center of a solar system, with the dimension tables as the planets orbiting the sun. By design, star schemas let data analysts **process data and get results from a database quickly**. This type of schema is best for high-scale information delivery because it makes read output more efficient.
 
 -   **雪花模型 Snowflake schema:** A **snowflake schema** is an extension of a star schema with more dimensions and even sub-dimensions, too. These dimensions and sub-dimensions create a snowflake pattern. Like real snowflakes, a snowflake schema---and the relationships within it---can be complex. Snowflake schemas are an organization type **designed for lightning-fast data processing**.
+
+### Metadata
+
+Metadata creates a single source of truth by keeping things consistent and uniform. Metadata also makes data more reliable by making sure it's accurate, precise, relevant, and timely.
+
+-   **Descriptive**
+
+    -   Metadata that describes a piece of data and can be used to identify it at a later point in time
+    -   For instance, the descriptive metadata of a book in a library would include the ISBN, author and title.
+
+-   **Structural**
+
+    -   Metadata that indicates how a piece of data is organized and whether it's part of one or more than one data collection. It also keeps track of the relationship between two things.
+
+    -   For instance, how the pages of a book are put together to create different chapters
+
+-   **Administrative**
+
+    -   Metadata that indicates the technical source of a digital asset
+
+    -   When we looked at the metadata inside the photo, that was administrative metadata.
+
+#### Managing metadata
+
+A **metadata repository** is a database specifically created to store metadata. Metadata repositories can be stored in a physical location, or they can be virtual, like data that exists in the cloud.
+
+These repositories describe where metadata came from, keep it in an accessible form so it can be used quickly and easily, and keep it in a common structure for everyone who may need to use it.
+
+-   First, metadata includes information about where each system is located and where the data sets are located within those systems.
+-   Second, the metadata describes how all of the data is connected between the various systems.
+
+Another important aspect of metadata is **data governance**.
+
+**Data governance** is a process to ensure the formal management of a company's data assets. This gives an organization better control of their data and helps a company manage issues related to data security and privacy, integrity, usability, and internal and external data flows.
+
+### Accessing different data sources
+
+If you are connecting to and performing SQL queries on other database platforms, here are similar getting started resources:
+
+-   MySQL: <https://dev.mysql.com/doc/mysql-getting-started/en/>
+-   Microsoft SQL Server: <https://docs.microsoft.com/en-us/sql/relational-databases/tutorial-getting-started-with-the-database-engine?view=sql-server-ver15>
+-   PostgreSQL: <https://www.postgresql.org/docs/10/tutorial-start.html>
+-   SQLite: <https://www.sqlite.org/quickstart.html>
+
+Big Query
