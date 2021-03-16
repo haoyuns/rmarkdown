@@ -477,15 +477,11 @@ When creating a file structure and naming convention pattern for a project, you 
 -   Make sure filenames are meaningful.
 -   Keep file names short and to the point.
 
-+--------------------------------------------------+----------------------------+
-| Formatting Convention                            | Example Format             |
-+:=================================================+============================+
-| Dates as 'yyyymmdd'                              | SalesReport20201125        |
-+--------------------------------------------------+----------------------------+
-| Lead revision numbers with 0                     | SalesReport20201125v02     |
-+--------------------------------------------------+----------------------------+
+| Formatting Convention | Example Format |
+| --- | --- |
+| Dates as 'yyyymmdd' | SalesReport20201125|
+| Lead revision numbers with 0 | SalesReport20201125v02 |
 | Use hyphens, underscores, or capitalized letters | SalesReport_2020_11_25_v02 |
-+--------------------------------------------------+----------------------------+
 
 ### Securing data
 
@@ -499,11 +495,11 @@ There are a lot of others, like using authentication devices for AI technology.
 
 ### Data integrity
 
-**Data replication** is the process of storing data in multiple locations. If you're replicating data at different times in different places, there's a chance your data will be out of sync.
+- **Data replication** is the process of storing data in multiple locations. If you're replicating data at different times in different places, there's a chance your data will be out of sync.
 
-**Data transfer** is the process of copying data from a storage device to memory, or from one computer to another. If your data transfer is interrupted, you might end up with an incomplete data set, which might not be useful for your needs.
+- **Data transfer** is the process of copying data from a storage device to memory, or from one computer to another. If your data transfer is interrupted, you might end up with an incomplete data set, which might not be useful for your needs.
 
-**Data manipulation** process involves changing the data to make it more organized and easier to read. Data manipulation is meant to make the data analysis process more efficient, but an error during the process can compromise the efficiency.
+- **Data manipulation** process involves changing the data to make it more organized and easier to read. Data manipulation is meant to make the data analysis process more efficient, but an error during the process can compromise the efficiency.
 
 Data can also be compromised through *human error, viruses, malware, hacking, and system failures*, which can all lead to even more headaches.
 
