@@ -497,7 +497,18 @@ There are a lot of others, like using authentication devices for AI technology.
 
 ## Process data
 
-### Ensuring data integrity
+### Data integrity
+
+**Data replication** is the process of storing data in multiple locations. If you're replicating data at different times in different places, there's a chance your data will be out of sync.
+
+**Data transfer** is the process of copying data from a storage device to memory, or from one computer to another. If your data transfer is interrupted, you might end up with an incomplete data set, which might not be useful for your needs.
+
+**Data manipulation** process involves changing the data to make it more organized and easier to read. Data manipulation is meant to make the data analysis process more efficient, but an error during the process can compromise the efficiency.
+
+Data can also be compromised through *human error, viruses, malware, hacking, and system failures*, which can all lead to even more headaches.
+
+#### Data constraints
+<img src="dconstraint.png" width="800"/>
 
 ### Clean data
 
