@@ -466,4 +466,41 @@ If you are connecting to and performing SQL queries on other database platforms,
 -   PostgreSQL: <https://www.postgresql.org/docs/10/tutorial-start.html>
 -   SQLite: <https://www.sqlite.org/quickstart.html>
 
-Big Query
+### Organizing data
+
+#### Naming conventions
+
+When creating a file structure and naming convention pattern for a project, you should always:
+
+-   Work out your conventions early in your project.
+-   Align file naming conventions with your team.
+-   Make sure filenames are meaningful.
+-   Keep file names short and to the point.
+
++--------------------------------------------------+----------------------------+
+| Formatting Convention                            | Example Format             |
++:=================================================+============================+
+| Dates as 'yyyymmdd'                              | SalesReport20201125        |
++--------------------------------------------------+----------------------------+
+| Lead revision numbers with 0                     | SalesReport20201125v02     |
++--------------------------------------------------+----------------------------+
+| Use hyphens, underscores, or capitalized letters | SalesReport_2020_11_25_v02 |
++--------------------------------------------------+----------------------------+
+
+### Securing data
+
+**Encryption** uses a unique algorithm to alter data and make it unusable by users and applications that don't know the algorithm. This algorithm is saved as a "key" which can be used to reverse the encryption; so if you have the key, you can still use the data in its original form.
+
+**Tokenization** replaces the data elements you want to protect with randomly generated data referred to as a "token." The original data is stored in a separate location and mapped to the tokens. To access the complete original data, the user or application needs to have permission to use the tokenized data and the token mapping. This means that even if the tokenized data is hacked, the original data is still safe and secure in a separate location.
+
+There are a lot of others, like using authentication devices for AI technology.
+
+## Process data
+
+### Ensuring data integrity
+
+### Clean data
+
+### Cleaning using SQL
+
+### Verifying and reporting
