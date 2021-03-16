@@ -316,16 +316,13 @@ Reference: <https://dataedo.com/blog/basic-data-modeling-techniques>
 ### Data bias
 
 -   **Observer** bias
-
     -   sometimes referred to as experimenter bias or research bias
     -   the tendency for different people to observe things differently
 
 -   **Interpretation** bias
-
     -   the tendency to always interpret ambiguous situations in a positive, or negative way
 
 -   **Confirmation** bias
-
     -   the tendency to search for, or interpret information in a way that confirms preexisting beliefs
 
 ### Good data
@@ -345,20 +342,15 @@ Ethics refers to well-founded **standards of right and wrong** that prescribe wh
 #### Aspects of data ethics
 
 -   **Ownership**
-
     -   It's individuals who own the raw data they provide, and they have primary control over its usage, how it's processed, and how it's shared.
 
 -   **Transaction transparency**
-
-    -   all data processing activities and algorithms should be completely explainable and understood by the individual who provides their data
-    -   in response to concerns over data bias
+    -   all data processing activities and algorithms should be completely explainable and understood by the individual who provides their data in response to concerns over data bias
 
 -   **Consent**
-
     -   an individual's right to know explicit details about how and why their data will be used before agreeing to provide it
 
 -   **Currency**
-
     -   Individuals should be aware of financial transactions resulting from the use of their personal data and the scale of these transactions
 
 -   **Privacy**
@@ -397,15 +389,12 @@ In data analytics, **open data** is part of **data ethics,** which has to do wit
 
 **PII and licensing, third party data, and privacy**
 
-**Second party data** is data that's collected by a group directly from its audience and then sold. Third party data doesn't come from inside your own business
+- **Second party data** is data that's collected by a group directly from its audience and then sold. Third party data doesn't come from inside your own business
 
-**Third party data** is collected by an entity that doesn't have a direct relationship with the data. For example, third parties might collect information about visitors to a certain website. Doing this lets these third parties create "audience profiles," which helps them better understand user behavior, and target them with more effective advertising.
+- **Third party data** is collected by an entity that doesn't have a direct relationship with the data. For example, third parties might collect information about visitors to a certain website. Doing this lets these third parties create "audience profiles," which helps them better understand user behavior, and target them with more effective advertising.
 
-**Personal Identifiable Information (PII)** is data that is reasonably likely to identify a person and make information known about them. We all want to keep this type of information about ourselves private. So it is important to find a balance between privacy and openness in public data.
+- **Personal Identifiable Information (PII)** is data that is reasonably likely to identify a person and make information known about them. We all want to keep this type of information about ourselves private. So it is important to find a balance between privacy and openness in public data.
 
-**Ethical data use**
-
--   Be self-reflect and understand what it is that you're doing and the impact that it has.
 
 ## Databases
 
@@ -485,9 +474,9 @@ When creating a file structure and naming convention pattern for a project, you 
 
 ### Securing data
 
-**Encryption** uses a unique algorithm to alter data and make it unusable by users and applications that don't know the algorithm. This algorithm is saved as a "key" which can be used to reverse the encryption; so if you have the key, you can still use the data in its original form.
+- **Encryption** uses a unique algorithm to alter data and make it unusable by users and applications that don't know the algorithm. This algorithm is saved as a "key" which can be used to reverse the encryption; so if you have the key, you can still use the data in its original form.
 
-**Tokenization** replaces the data elements you want to protect with randomly generated data referred to as a "token." The original data is stored in a separate location and mapped to the tokens. To access the complete original data, the user or application needs to have permission to use the tokenized data and the token mapping. This means that even if the tokenized data is hacked, the original data is still safe and secure in a separate location.
+- **Tokenization** replaces the data elements you want to protect with randomly generated data referred to as a "token." The original data is stored in a separate location and mapped to the tokens. To access the complete original data, the user or application needs to have permission to use the tokenized data and the token mapping. This means that even if the tokenized data is hacked, the original data is still safe and secure in a separate location.
 
 There are a lot of others, like using authentication devices for AI technology.
 
@@ -505,6 +494,20 @@ Data can also be compromised through *human error, viruses, malware, hacking, an
 
 #### Data constraints
 <img src="dconstraint.png" width="800"/>
+
+#### Well-aligned objectives and data
+Data being used for analysis should align with **business objectives** and help answer stakeholder questions.
+
+- When there is clean data and good alignment, you can make accurate insights and conclusions.
+- If there is good alignment but the data needs to be cleaned, clean the data before you perform your analysis. 
+- If the data only partially aligns with an objective, think about how you could modify the objective, or use data constraints to make sure that the subset of data better aligns with the business objective.
+
+#### Deal with data issues
+
+- Data errors
+
+<img src="dissues.png" width="800"/>
+
 
 ### Clean data
 
