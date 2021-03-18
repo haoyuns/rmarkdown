@@ -685,7 +685,22 @@ Ask a teammate to review your data from a fresh perspective and getting feedback
 
 A **changelog** is a file containing a chronologically ordered list of modifications made to a project.
 
-Typically, a changelog records this type of information: 
+- Changelogs are for humans, not machines, so write legibly
+- Every version should have its own entry
+
+- Group the same types of changes. For example：
+    - *Added*: new features introduced
+    - *Changed*: changes in existing functionality
+    - *Deprecated*: features about to be removed
+    - *Removed*: features that have been removed
+    - *Fixed*: bug fixes
+    - *Security*: lowering vulnerabilities
+    
+- Each change gets its own line
+- Versions should be ordered chronologically starting with the latest
+- Release date of each version should be noted
+
+Typically, a **changelog** records this type of information:
 
 - Data, file, formula, query, or any other component that changed
 - Description of what changed
@@ -695,7 +710,11 @@ Typically, a changelog records this type of information:
 - Version number
 - Reason for the change
 
-Here is how a version control system affects a change to a query:
+It is common to keep changelogs as a readme file in a code repository.
+
+<img src="dlog.png" width = "800">
+
+Here is how a **version control system** affects a change to a query:
 
 1. A company has official versions of important queries in their **version control system**.
 2. An analyst makes sure the most up-to-date version of the query is the one they will change. This is called **syncing**.
