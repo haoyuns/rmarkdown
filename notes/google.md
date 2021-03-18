@@ -557,10 +557,154 @@ Also:
 
 Sample Size Calculator: https://www.coursera.org/learn/process-data/supplement/ZqcDw/sample-size-calculator
 
+**Margin of error**
+
+A/B testing (or split testing) tests two variations of the same web page to determine which page is more successful in attracting user traffic and generating revenue. User traffic that gets monetized is known as the conversion rate. A/B testing allows marketers to test emails, ads, and landing pages to find the data behind what is working and what isn’t working. Marketers use the confidence interval (made up of the conversion rate and the margin of error) to understand the results.
+
+Calculator: https://goodcalculators.com/margin-of-error-calculator/
 
 
 ### Clean data
+**Data engineers** transform data into a useful format for analysis and give it a reliable infrastructure. This means they develop, maintain, and test databases, data processors and related systems.
+
+**Data warehousing specialists** develop processes and procedures to effectively store and organize data. They make sure that data is available, secure, and backed up to prevent loss.
+
+#### Types of dirty data
+- **Duplicate data**
+    - description: any data record that shows up more than once
+    - possible causes: manual data entry, batch data imports, or data migration
+    - potential harm: skewed metrics or analyses, inflated or inaccurate counts or predictions, or confusion during data retrieval
+
+- **Outdated data**
+    - description: any data that has been superseded by newer and more accurate information
+    - possible causes: people changing roles or companies, or software and systems becoming obsolete
+    - potential harm: inaccurate insights, decision-making, and analytics
+
+- **Incomplete data**
+    - description: any data that is missing important fields
+    - possible causes: improper data collection or incorrect data entry
+    - potential harm: decreased productivity, inaccurate insights, or inability to complete essential services
+
+- **Incorrect/inaccurate data**
+    - description: any data that is complete but inaccurate
+    - possible causes: human error inserted during data input, fake information, or mock data
+    - potential harm: inaccurate insights or decision-making based on bad information resulting in revenue loss
+
+- **Inconsistent data**
+    - description: any data that uses different formats to represent the same thing
+    - possible causes: data stored incorrectly or errors inserted during data transfer
+    - potential harm: contradictory data points leading to confusion or inability to classify or segment customers
+
+**Data validation** is a tool for checking the accuracy and quality of data before adding or importing it.
+
+#### Common mistakes
+- Not checking for spelling errors
+- Forgetting to document errors
+- Not checking for misfielded values: A misfielded value happens when the values are entered into the wrong field
+- Overlooking missing values
+- Only looking at a subset of the data
+- Losing track of business objectives
+- Not fixing the source of the error
+- Not analyzing the system prior to data cleaning
+- Not backing up your data prior to data cleansing
+- Not accounting for data cleaning in your deadlines/process
+
+#### Data merging
+Compatibility: how well two or more datasets are able to work together.
+
+#### Data mapping
+is the process of matching fields from one database to another. This is very important to the success of data migration, data integration, and lots of other data management activities.
+
+Depending on the schema and number of primary and foreign keys in a data source, data mapping can be simple or very complex.
+
+- Identify what data needs to be moved
+- Transforming data into a consistent format
+- Transfer data to its destination
+- Inspect a sample piece of data to confirm
+
+
+#### Automating data cleaning
+- Towards Data Science’s [Automating Scientific Data Analysis](https://towardsdatascience.com/automating-scientific-data-analysis-part-1-c9979cd0817e)
+- MIT News’ [Automating Big-Data Analysis](https://news.mit.edu/2016/automating-big-data-analysis-1021)
+- TechnologyAdvice’s [10 of the Best Options for Workflow Automation Software](https://technologyadvice.com/blog/information-technology/top-10-workflow-automation-software/)
+
 
 ### Cleaning using SQL
 
+#### SQL Dialects
+- The SQL Standard is an official ANSI/ISO document that defines the syntax of SQL. No database is fully compatible with the standard.
+- Transact-SQL, or **T-SQL**, is the name of the variant of SQL used in the Microsoft SQL Server database.
+- **PL/SQL** is the procedural extension to SQL in the Oracle database. It is used to write your own functions and procedures in Oracle.
+- **PL/pgSQL** is the procedural extension to SQL in the PostgreSQL database. It is used to write your own functions and procedures in PostgreSQL.
+
+https://learnsql.com/blog/what-sql-dialect-to-learn/
+
+SQL Server, PostgreSQL, MySQL... what's the difference? Where do I start? https://www.datacamp.com/community/blog/sql-differences
+
+#### Functions
+- Getting data from a table using **SELECT** statements
+- De-duplicating data using commands like **DISTINCT** and **COUNT + WHERE**
+- Manipulating string data with **TRIM()**, **SUBSTR**, and **LENGTH**
+- Creating/Dropping Tables with **CREATE TABLE** and **DROP TABLE**
+- Changing data types with **CAST**
+    - CAST(field AS datatype)
+- CONCAT()
+- COALESCE(column1, column2) AS new_column: return non-null values
+- CASE WHEN
+
 ### Verifying and reporting
+**Verification** is a process to confirm that a data cleaning effort was well- executed and the resulting data is accurate and reliable. It also involves manually cleaning data to compare your expectations with what's actually present.
+
+1. Go back to your original unclean data set and comparing it to what you have now.
+    - Sources of errors
+    - Null data
+    - Misspelled words
+    - Mistyped numbers
+    - Extra spaces and characters
+    - Duplicates
+    - Mismatched data types
+    - Messy (inconsistent) strings
+    - Messy (inconsistent) date formats
+    - Misleading variable labels (columns)
+    - Truncated data
+    - Business Logic: Did you check that the data makes sense given your knowledge of the business?
+
+2. Take a big-picture view of your project:
+    - consider the business problem you're trying to solve with the data
+    - consider the goal of the project
+    - consider whether your data is capable of solving the problem and meeting the project objectives
+
+Ask a teammate to review your data from a fresh perspective and getting feedback from others.
+
+3. Manually fix errors.
+
+#### Documenting cleaning results
+- recover data-cleaning errors
+- inform others of changes you've made
+- determine the quality of data to be used in analysis
+
+A **changelog** is a file containing a chronologically ordered list of modifications made to a project.
+
+Typically, a changelog records this type of information: 
+
+- Data, file, formula, query, or any other component that changed
+- Description of what changed
+- Date of the change
+- Person who made the change
+- Person who approved the change
+- Version number
+- Reason for the change
+
+Here is how a version control system affects a change to a query:
+
+1. A company has official versions of important queries in their **version control system**.
+2. An analyst makes sure the most up-to-date version of the query is the one they will change. This is called **syncing**.
+3. The analyst makes a change to the query.
+4. The analyst might ask someone to review this change. This is called a **code review** and can be informally or formally done. An informal review could be as simple as asking a senior analyst to take a look at the change.
+5. After a reviewer approves the change, the analyst submits the updated version of the query to a repository in the company's version control system. This is called a **code commit**. A best practice is to document exactly what the change was and why it was made in a comments area. Going back to our example of a query that pulls daily revenue, a comment might be: Updated revenue to include revenue coming from the new product, Calypso.
+6. After the change is **submitted**, everyone else in the company will be able to access and use this new query when they **sync** to the most up-to-date queries stored in the version control system.
+7. If the query has a problem or business needs change, the analyst can **undo** the change to the query using the version control system. The analyst can look at a chronological list of all changes made to the query and who made each change. Then, after finding their own change, the analyst can **revert** back to the previous version.
+8. The query is back to what it was before the analyst made the change. And everyone at the company sees this reverted, original query, too.
+
+
+
