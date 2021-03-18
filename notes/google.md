@@ -725,5 +725,29 @@ Here is how a **version control system** affects a change to a query:
 7. If the query has a problem or business needs change, the analyst can **undo** the change to the query using the version control system. The analyst can look at a chronological list of all changes made to the query and who made each change. Then, after finding their own change, the analyst can **revert** back to the previous version.
 8. The query is back to what it was before the analyst made the change. And everyone at the company sees this reverted, original query, too.
 
+Common data errors:
+- Human error in data entry
+- Flawed processes
+- System issues
+
+<img src="dspred.png" width = "800">
+
+## Analyze Data
+4 phases of analysis:
+- organize data
+- format and adjust data
+- get input from others
+- transform data by observing relationships between data points and making calculations
+
+Database organization enables analysts to make decisions about which data is relevant to pull for a specific analysis. It also helps them decide which data types and variables are appropriate.
+
+### Organize data
+Sorting & Filtering
+
+### Formatting and adjusting data
 
 
+### Aggregating data for analysis
+
+
+### Performing data calculations
