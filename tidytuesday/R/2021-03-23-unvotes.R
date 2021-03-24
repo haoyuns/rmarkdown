@@ -29,7 +29,7 @@ aseanvotes <- joined %>%
   filter(votes > 5)
 
 
-# graph --------------------
+# visualize ------------------
 # ggthemes examples: https://github.com/BTJ01/ggthemes, https://ggplot2.tidyverse.org/reference/element.html
 
 ggplot(aseanvotes, aes(year, percent_yes, color = issue)) +
@@ -52,6 +52,5 @@ ggplot(aseanvotes, aes(year, percent_yes, color = issue)) +
         axis.text = element_text(size = 7),
         strip.text = element_text(size = 9))
 
+# save graph ------------------
 ggsave("unvotes.jpeg", width = 8, height = 5, dpi = 640)
-  
-  
