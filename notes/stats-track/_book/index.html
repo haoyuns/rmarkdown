@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Statistician with R</title>
+  <meta name="description" content="Statistician with R" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Statistician with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistician with R" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="intro-to-data-in-r.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Statistician with R</a></li>
+<li class="chapter" data-level="1" data-path="intro-to-data-in-r.html"><a href="intro-to-data-in-r.html"><i class="fa fa-check"></i><b>1</b> Intro to Data in R</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro-to-data-in-r.html"><a href="intro-to-data-in-r.html#dealing-with-factors"><i class="fa fa-check"></i><b>1.1</b> Dealing with factors</a></li>
+<li class="chapter" data-level="1.2" data-path="intro-to-data-in-r.html"><a href="intro-to-data-in-r.html#types-of-variables"><i class="fa fa-check"></i><b>1.2</b> Types of variables</a></li>
+<li class="chapter" data-level="1.3" data-path="intro-to-data-in-r.html"><a href="intro-to-data-in-r.html#types-of-studies"><i class="fa fa-check"></i><b>1.3</b> Types of studies</a></li>
+<li class="chapter" data-level="1.4" data-path="intro-to-data-in-r.html"><a href="intro-to-data-in-r.html#scope-of-inference-统计推断"><i class="fa fa-check"></i><b>1.4</b> Scope of inference 统计推断</a></li>
+<li class="chapter" data-level="1.5" data-path="intro-to-data-in-r.html"><a href="intro-to-data-in-r.html#sampling"><i class="fa fa-check"></i><b>1.5</b> Sampling</a></li>
+<li class="chapter" data-level="1.6" data-path="intro-to-data-in-r.html"><a href="intro-to-data-in-r.html#principles-of-experimental-design"><i class="fa fa-check"></i><b>1.6</b> Principles of experimental design</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>2</b> Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exploring-categorical-data"><i class="fa fa-check"></i><b>2.1</b> Exploring categorical data</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#counts-vs-proportions"><i class="fa fa-check"></i><b>2.1.1</b> Counts vs Proportions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exploring-numerical-data"><i class="fa fa-check"></i><b>2.2</b> Exploring Numerical Data</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#distribution-of-one-variable"><i class="fa fa-check"></i><b>2.2.1</b> Distribution of one variable</a></li>
+<li class="chapter" data-level="2.2.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualization-in-higher-dimensions"><i class="fa fa-check"></i><b>2.2.2</b> Visualization in higher dimensions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#numerical-summaries"><i class="fa fa-check"></i><b>2.3</b> Numerical Summaries</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#measures-of-center-and-variability"><i class="fa fa-check"></i><b>2.3.1</b> Measures of Center and Variability</a></li>
+<li class="chapter" data-level="2.3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#shape-and-transformations"><i class="fa fa-check"></i><b>2.3.2</b> Shape and transformations</a></li>
+<li class="chapter" data-level="2.3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#zero-inflation-strategies"><i class="fa fa-check"></i><b>2.3.3</b> Zero inflation strategies</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html"><i class="fa fa-check"></i><b>3</b> Modeling with Data in the Tidyverse</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#introduction-to-modeling"><i class="fa fa-check"></i><b>3.1</b> Introduction to Modeling</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#the-modeling-problem-for-explanation"><i class="fa fa-check"></i><b>3.1.1</b> The modeling problem for explanation</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#the-modeling-problem-for-prediction"><i class="fa fa-check"></i><b>3.1.2</b> The modeling problem for prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#modeling-with-basic-regression"><i class="fa fa-check"></i><b>3.2</b> Modeling with Basic Regression</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#refresher-modeling-in-general"><i class="fa fa-check"></i><b>3.2.1</b> Refresher: Modeling in general</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#modeling-with-basic-regression-1"><i class="fa fa-check"></i><b>3.2.2</b> Modeling with Basic Regression</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#predicted-value"><i class="fa fa-check"></i><b>3.2.3</b> Predicted value</a></li>
+<li class="chapter" data-level="3.2.4" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#prediction-error"><i class="fa fa-check"></i><b>3.2.4</b> Prediction error</a></li>
+<li class="chapter" data-level="3.2.5" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#fitting-a-regression-with-a-categorical-x"><i class="fa fa-check"></i><b>3.2.5</b> Fitting a regression with a categorical x</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#modeling-with-multiple-regression"><i class="fa fa-check"></i><b>3.3</b> Modeling with Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#combining-numerical-variables"><i class="fa fa-check"></i><b>3.3.1</b> Combining numerical variables</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#combining-numerical-and-categorical-variables"><i class="fa fa-check"></i><b>3.3.2</b> Combining numerical and categorical variables</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#model-assessment-and-selection"><i class="fa fa-check"></i><b>3.4</b> Model Assessment and Selection</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#assessing-with-sum-of-squared-residuals"><i class="fa fa-check"></i><b>3.4.1</b> Assessing with sum of squared residuals</a></li>
+<li class="chapter" data-level="3.4.2" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#assessing-with-r-squared"><i class="fa fa-check"></i><b>3.4.2</b> Assessing with R-squared</a></li>
+<li class="chapter" data-level="3.4.3" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#assessing-predictions-with-rmse"><i class="fa fa-check"></i><b>3.4.3</b> Assessing predictions with RMSE</a></li>
+<li class="chapter" data-level="3.4.4" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#validation-set-prediction-framework"><i class="fa fa-check"></i><b>3.4.4</b> “Validation set” prediction framework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="modeling-with-data-in-the-tidyverse.html"><a href="modeling-with-data-in-the-tidyverse.html#where-to-go-from-here"><i class="fa fa-check"></i><b>3.5</b> Where to go from here?</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html"><i class="fa fa-check"></i><b>4</b> Correlation and Regression in R</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#visualizing-two-variables"><i class="fa fa-check"></i><b>4.1</b> Visualizing two variables</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#bivariate-relationships"><i class="fa fa-check"></i><b>4.1.1</b> Bivariate relationships</a></li>
+<li class="chapter" data-level="4.1.2" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#graphical-representations"><i class="fa fa-check"></i><b>4.1.2</b> Graphical representations</a></li>
+<li class="chapter" data-level="4.1.3" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#characterizing-bivariate-relationships"><i class="fa fa-check"></i><b>4.1.3</b> Characterizing bivariate relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#correlation"><i class="fa fa-check"></i><b>4.2</b> Correlation</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#pearson-product-moment-correlation"><i class="fa fa-check"></i><b>4.2.1</b> Pearson product-moment correlation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#francis-anscombe-dataset"><i class="fa fa-check"></i><b>4.2.2</b> <em>Francis Anscombe</em> dataset</a></li>
+<li class="chapter" data-level="4.2.3" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#spurious-correlations"><i class="fa fa-check"></i><b>4.2.3</b> Spurious correlations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#simple-linear-regression"><i class="fa fa-check"></i><b>4.3</b> Simple linear regression</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#visualization-of-linear-models"><i class="fa fa-check"></i><b>4.3.1</b> Visualization of linear models</a></li>
+<li class="chapter" data-level="4.3.2" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#understanding-linear-models"><i class="fa fa-check"></i><b>4.3.2</b> Understanding linear models</a></li>
+<li class="chapter" data-level="4.3.3" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#regression-vs.-regression-to-the-mean"><i class="fa fa-check"></i><b>4.3.3</b> Regression vs. Regression to the mean</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#interpreting-regression-models"><i class="fa fa-check"></i><b>4.4</b> Interpreting regression models</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#the-lm-summary-output"><i class="fa fa-check"></i><b>4.4.1</b> The <code>lm</code> summary output</a></li>
+<li class="chapter" data-level="4.4.2" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#fitted-values-and-residuals"><i class="fa fa-check"></i><b>4.4.2</b> Fitted values and residuals</a></li>
+<li class="chapter" data-level="4.4.3" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#tidying-your-linear-model"><i class="fa fa-check"></i><b>4.4.3</b> Tidying your linear model</a></li>
+<li class="chapter" data-level="4.4.4" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#making-predictions"><i class="fa fa-check"></i><b>4.4.4</b> Making predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#model-fit"><i class="fa fa-check"></i><b>4.5</b> Model fit</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#comparing-model-fits"><i class="fa fa-check"></i><b>4.5.1</b> Comparing model fits</a></li>
+<li class="chapter" data-level="4.5.2" data-path="correlation-and-regression-in-r.html"><a href="correlation-and-regression-in-r.html#unusual-points"><i class="fa fa-check"></i><b>4.5.2</b> Unusual points</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistician with R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Statistician with R</h1>
+<p class="author"><em></em></p>
+</div>
+<div id="statistician-with-r" class="section level1 unnumbered">
+<h1>Statistician with R</h1>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="intro-to-data-in-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -151,18 +151,16 @@ In case of extreme observations, `IQR()` depicts the most accurate spread.
 
 -   用log()减弱outliers的影响
 
-```{=html}
 <!-- -->
-```
+
     ggplot(life, aes(x = income, fill = west_coast)) +
     geom_density(alpha = .3)
     ggplot(life, aes(x = log(income), fill = west_coast)) + geom_density(alpha = .3)
 
 -   直接定义及去掉outliers
 
-```{=html}
 <!-- -->
-```
+
     life <- life %>%
     mutate(is_outlier = income > 75000) 
 

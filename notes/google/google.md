@@ -742,7 +742,9 @@ Common data errors:
 Database organization enables analysts to make decisions about which data is relevant to pull for a specific analysis. It also helps them decide which data types and variables are appropriate.
 
 ### Organize data
-Sorting & Filtering
+- **Sorting** involves arranging data into a meaningful order to make it easier to understand, analyze, and visualize.
+
+- **Filtering** is used when you are only interested in seeing data that meets a specific criteria, and hiding the rest.
 
 ### Formatting and adjusting data
 
