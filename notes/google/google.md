@@ -839,6 +839,20 @@ SELECT *
                 ORDER BY date
                 LIMIT 5
               )
+# Note that you should not include an alias when you write a subquery in a conditional statement. This is because the subquery is treated as an individual value (or set of values in the IN case) rather than as a table.
 ```
+
+*Join subqueries:*
+```SQL
+SELECT *
+  FROM tutorial.sf_crime_incidents_2014_01 incidents
+  JOIN ( SELECT date
+           FROM tutorial.sf_crime_incidents_2014_01
+          ORDER BY date
+          LIMIT 5
+       ) sub
+    ON incidents.date = sub.date
+```
+Reference: https://mode.com/sql-tutorial/sql-sub-queries/
 
 ### Performing data calculations
