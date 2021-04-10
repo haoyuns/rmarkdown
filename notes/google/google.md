@@ -747,6 +747,25 @@ Database organization enables analysts to make decisions about which data is rel
 - **Filtering** is used when you are only interested in seeing data that meets a specific criteria, and hiding the rest.
 
 ### Formatting and adjusting data
+Data validation in spreadsheets:
+- Add dropdown lists with predetermined options
+- Create custom checkboxes
+- Protect structured data and formulas
+
+Transforming data in SQL:
+- **CAST()**
+    - converting a number to a string, `SELECT CAST(MyCount AS STRING) FROM MyTable`
+    - converting a string to a number, `SELECT CAST(MyCharCol AS INT) FROM MyTable`
+    - converting a date to a datetime, `SELECT CAST(MyDate AS DATETIME) FROM MyTable`
+
+- **SAFT_CAST()**, to avoid errors in the event of a failed query, use the SAFE_CAST function instead. The SAFE_CAST function returns a value of Null instead of an error when a query fails.
+
+Reference:
+- MySQL Cast functions and operators: https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html
+
+- SQL Server, Azure CAST and CONVERT: https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15
+
+- SQL type casting (Amazon Redshift, PostgreSQL, Google BigQuery or SQL Server): https://www.blendo.co/blog/how-to-sql-type-casting/
 
 
 ### Aggregating data for analysis
