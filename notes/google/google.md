@@ -776,13 +776,50 @@ Reference:
 
 - *TRUE* means approximate match, *FALSE* means exact match.
 - You want your VLOOKUP column to be on the left hand side of your data. The VLOOKUP only looks at data to the right.
-- Once you’ve populated data with the VLOOKUP formula, copy and paste as values before you start to manipulate the data. 
-SQL JOINS: INNER, LEFT, RIGHT and OUTER.
+- Once you’ve populated data with the VLOOKUP formula, copy and paste as values before you start to manipulate the data.
 
-![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/V3K80lLeRfayvNJS3tX2DQ_c5371083976944c7808132ca392f419d_Screen-Shot-2021-02-07-at-5.14.41-PM.png?expiry=1618185600000&hmac=0LPga7EsUMHV1eEEjx9bB2NpYiim2MA--jfjHKdhf3s)
+#### SQL **JOIN** types
+- *Cross Joins* would result in a table with all possible combinations of your tables’ rows together
+    - `SELECT * FROM facebook CROSS JOIN linkedin`
+- *Inner Joins* return rows when the join condition is met
+    - `FROM table1 INNER JOIN table2 ON table1.column1 = table2.column2`
+- *Outer Joins* return all the rows from one table, and if the join condition is met, columns from the other
+    - LEFT JOIN
+    - RIGHT JOIN
+    - FULL JOIN
 
-`FROM table1 JOIN table2
-    ON column1 = column2`
+![](https://dataschool.com/assets/images/how-to-teach-people-sql/sqlJoins/sqlJoins_7.png)
+
+Reference:
+
+- https://dataschool.com/how-to-teach-people-sql/sql-join-types-explained-visually/
+- https://www.dofactory.com/sql/union
+
+
+#### COUNT and COUNT DISTINCT
+#### Subqueries
+- Subqueries must be enclosed within parentheses
+- A subquery can have only one column in the SELECT clause unless multiple columns are in the main query for the subquery to compare its selected columns
+- Subqueries that return more than one row can only be used with multiple value operators, such as the IN operator
+- A subquery can’t be immediately enclosed in a set function
+
+
+*Using subqueries to aggregate in multiple stages:*
+
+```
+SELECT LEFT(sub.date, 2) AS cleaned_month,
+       sub.day_of_week,
+       AVG(sub.incidents) AS average_incidents
+  FROM (
+        SELECT day_of_week,
+               date,
+               COUNT(incidnt_num) AS incidents
+          FROM tutorial.sf_crime_incidents_2014_01
+         GROUP BY 1,2
+       ) sub
+ GROUP BY 1,2
+ ORDER BY 1,2
+```
 
 
 ### Performing data calculations
