@@ -748,11 +748,12 @@ Database organization enables analysts to make decisions about which data is rel
 
 ### Formatting and adjusting data
 Data validation in spreadsheets:
+
 - Add dropdown lists with predetermined options
 - Create custom checkboxes
 - Protect structured data and formulas
 
-Transforming data in SQL:
+#### Transforming data in SQL:
 - **CAST()**
     - converting a number to a string, `SELECT CAST(MyCount AS STRING) FROM MyTable`
     - converting a string to a number, `SELECT CAST(MyCharCol AS INT) FROM MyTable`
@@ -767,8 +768,21 @@ Reference:
 
 - SQL type casting (Amazon Redshift, PostgreSQL, Google BigQuery or SQL Server): https://www.blendo.co/blog/how-to-sql-type-casting/
 
+#### Merging multiple data
+**CONCAT()** adds strings together to create new text strings that can be used as unique keys, `SELECT CONCAT ('Data', '  ', 'analysis')`
 
 ### Aggregating data for analysis
+**VLOOKUP**:
+
+- *TRUE* means approximate match, *FALSE* means exact match.
+- You want your VLOOKUP column to be on the left hand side of your data. The VLOOKUP only looks at data to the right.
+- Once you’ve populated data with the VLOOKUP formula, copy and paste as values before you start to manipulate the data. 
+SQL JOINS: INNER, LEFT, RIGHT and OUTER.
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/V3K80lLeRfayvNJS3tX2DQ_c5371083976944c7808132ca392f419d_Screen-Shot-2021-02-07-at-5.14.41-PM.png?expiry=1618185600000&hmac=0LPga7EsUMHV1eEEjx9bB2NpYiim2MA--jfjHKdhf3s)
+
+`FROM table1 JOIN table2
+    ON column1 = column2`
 
 
 ### Performing data calculations
