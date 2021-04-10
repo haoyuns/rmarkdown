@@ -821,5 +821,24 @@ SELECT LEFT(sub.date, 2) AS cleaned_month,
  ORDER BY 1,2
 ```
 
+*Subqueries in conditional logic:*
+
+```SQL
+SELECT *
+  FROM tutorial.sf_crime_incidents_2014_01
+ WHERE Date = (SELECT MIN(date)
+                 FROM tutorial.sf_crime_incidents_2014_01
+              )
+
+# IN is the only type of conditional logic that will work when the inner query contains multiple results
+
+SELECT *
+  FROM tutorial.sf_crime_incidents_2014_01
+ WHERE Date IN (SELECT date
+                 FROM tutorial.sf_crime_incidents_2014_01
+                ORDER BY date
+                LIMIT 5
+              )
+```
 
 ### Performing data calculations
