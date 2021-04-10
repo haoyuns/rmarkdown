@@ -806,7 +806,7 @@ Reference:
 
 *Using subqueries to aggregate in multiple stages:*
 
-```
+```SQL
 SELECT LEFT(sub.date, 2) AS cleaned_month,
        sub.day_of_week,
        AVG(sub.incidents) AS average_incidents
