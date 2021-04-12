@@ -877,3 +877,87 @@ checks that the data falls within an acceptable range of values defined for the 
 
 *Limitations*: The data value 11.5 would be in the data range and would also pass as a numeric data type. But, it would be unacceptable because there aren't half grades. For this case, data constraint validation is also needed.
 
+3. Data constraints  
+checks that the data meets certain conditions or criteria for a field. This includes the type of data entered as well as other attributes of the field, such as number of characters
+
+*Limitations*: The data value 13 is a whole number and would pass the content constraint validation. But, it would be unacceptable since 13 isn’t an elementary school grade. For this case, data range validation is also needed.
+
+4. Data consistency  
+checks that the data makes sense in the context of other related data
+
+**Example**: Data values for product shipping dates can’t be earlier than product production dates.
+
+*Limitations*: Data might be consistent but still incorrect or inaccurate. A shipping date could be later than a production date and still be wrong.
+
+5. Data structure  
+checks that the data follows or conforms to a set structure
+
+**Example**: Web pages must follow a prescribed structure to be displayed properly.
+
+*Limitations*: A data structure might be correct with the data still incorrect or inaccurate. Content on a web page could be displayed properly and still contain the wrong information.
+
+6. Code validation
+checks that the application code systematically performs any of the previously mentioned validations during user data input
+
+**Example**: Common problems discovered during code validation include: more than one data type allowed, data range checking not done or ending of text strings not well defined.
+
+*Limitations*: Code validation might not validate all possible variations with data input.
+
+#### SQL temporary tables
+Temporary tables in a SQL database that aren’t stored permanently. They are automatically deleted from the database when you end your SQL session.
+
+- can be used as a holding area for storing values if you are making a series of calculations. This is sometimes referred to as **pre-processing** of the data.
+- can collect the results of multiple, separate queries. This is sometimes referred to as data **staging**. Staging is useful if you need to perform a query on the collected data or merge the collected data.
+- can store a filtered subset of the database. You don’t need to select and filter the data each time you work with it. In addition, using fewer SQL commands helps to keep your data clean.
+
+**Table creation:**
+
+- **SELECT INTO** copies data from one table into a new table, but it doesn't add the new table to the database. It's useful if you want to make a copy of a table with a specific condition, like a query with a WHERE clause.
+
+```SQL
+SELECT
+*
+INTO
+sales
+FROM
+Globalsales
+WHERE
+Region = "Africa"
+```
+
+- **WITH**
+
+```SQL
+WITH new_data AS (
+SELECT *
+FROM table
+WHERE trip >= 60
+)
+```
+
+- User-managed **CREATE TABLE** does add the table into the database in case everyone needs access to the table. The CREATE TABLE statement is also useful for tables that are more complex.  
+In most relational database management systems or RDBMSs, you can add metadata to describe the data that's contained in the table you've created.
+
+```SQL
+CREATE TABLE table_name (
+  colunm1 datatype,
+  colunm2 datatype,
+  ...
+)
+```
+
+After you have completed working with your temporary table, you can remove the table from the database using the **DROP TABLE** clause.
+
+**Best practices when working with temporary tables**
+
+- Global vs. local temporary tables
+
+Global temporary tables are made available to all database users and are deleted when all connections that use them have closed. Local temporary tables are made available only to the user whose query or connection established the temporary table. You will most likely be working with local temporary tables. If you have created a local temporary table and are the only person using it, you can drop the temporary table after you are done using it.
+
+- Dropping temporary tables after use
+
+Dropping a temporary table is a little different from deleting a temporary table. Dropping a temporary table not only removes the information contained in the rows of the table, but removes the table variable definitions (columns) themselves.
+
+Deleting a temporary table removes the rows of the table but leaves the table definition and columns ready to be used again. Although local temporary tables are dropped after you end your SQL session, it may not happen immediately.
+
+If a lot of processing is happening in the database, dropping your temporary tables after using them is a good practice to keep the database running smoothly. 
