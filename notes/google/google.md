@@ -856,3 +856,24 @@ SELECT *
 Reference: https://mode.com/sql-tutorial/sql-sub-queries/
 
 ### Performing data calculations
+- **SUMIF()**: `=SUMIF(range, criterion, sum_range)`
+- **SUMIFS()**: `=SUMIFS(sum_range, criteria_range1, criterion1, [criteria_range2, criterion2, ...])`
+- **COUNTIF()**: `=COUNTIF(range, criterion)`
+- **COUNTIFS()**: `=COUNTIFS(criteria_range1, criterion1, [criteria_range2, criterion2, ...])`
+- **SUMPRODUCT()**: it first multiplies arrays and returns the sum of those products, `=SUMPRODUCT(array1, [array2]...)`
+
+#### Types of data validation
+The first five are validation types associated with the data *(type, range, constraint, consistency, and structure)* and the sixth type focuses on the validation of application code used to accept data from user input.
+
+**Example**: Data values for elementary school grades should be values between 1 and 12.
+
+1. Data type  
+checks that the data matches the data type defined for a field
+
+*Limitations*: The data value 13 would pass the data type validation but would be an unacceptable value. For this case, data range validation is also needed.
+
+2. Data range  
+checks that the data falls within an acceptable range of values defined for the field
+
+*Limitations*: The data value 11.5 would be in the data range and would also pass as a numeric data type. But, it would be unacceptable because there aren't half grades. For this case, data constraint validation is also needed.
+
