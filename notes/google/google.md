@@ -912,7 +912,8 @@ Temporary tables in a SQL database that aren’t stored permanently. They are au
 
 **Table creation:**
 
-- **SELECT INTO** copies data from one table into a new table, but it doesn't add the new table to the database. It's useful if you want to make a copy of a table with a specific condition, like a query with a WHERE clause.
+- **SELECT INTO**  
+copies data from one table into a new table, but it doesn't add the new table to the database. It's useful if you want to make a copy of a table with a specific condition, like a query with a WHERE clause.
 
 ```SQL
 SELECT
@@ -935,7 +936,9 @@ WHERE trip >= 60
 )
 ```
 
-- User-managed **CREATE TABLE** does add the table into the database in case everyone needs access to the table. The CREATE TABLE statement is also useful for tables that are more complex.  
+- User-managed **CREATE TABLE**  
+does add the table into the database in case everyone needs access to the table. The CREATE TABLE statement is also useful for tables that are more complex.
+
 In most relational database management systems or RDBMSs, you can add metadata to describe the data that's contained in the table you've created.
 
 ```SQL
@@ -948,7 +951,7 @@ CREATE TABLE table_name (
 
 After you have completed working with your temporary table, you can remove the table from the database using the **DROP TABLE** clause.
 
-**Best practices when working with temporary tables**
+#### Best practices when working with temporary tables
 
 - Global vs. local temporary tables
 
