@@ -966,26 +966,33 @@ Deleting a temporary table removes the rows of the table but leaves the table de
 If a lot of processing is happening in the database, dropping your temporary tables after using them is a good practice to keep the database running smoothly.
 
 ## Data Visualization
-### Effective data viz
-1. The McCandless Method
+### Visualizing data
+#### Effective data viz
+1. **The McCandless Method**
 
-- Information: the data you are working with
-- Story: a clear and compelling narrative or concept
-- Goal: a specific objective or function for the visual
-- Visual form: an effective use of metaphor or visual expression
+- Information, the data you are working with
+- Story, a clear and compelling narrative or concept
+- Goal, a specific objective or function for the visual
+- Visual form, an effective use of metaphor or visual expression
 
 ![](https://infobeautiful4.s3.amazonaws.com/2015/05/2552_What-Makes-a-Good-Infoviz-frame02.png)
 
-2. Kaiser Fung's Junk Charts Trifecta Checkup
+2. **Kaiser Fung's Junk Charts Trifecta Checkup**
 
 - What is the practical question?
 - What does the data say?
 - What does the visual say?
 
-#### Pre-attentive attributes: marks and channels
-**Pre-attentive attributes** are the elements of a data visualization that people recognize automatically without conscious effort. The essential, basic building blocks that make visuals immediately understandable are called marks and channels.
+**Elements for effective visuals:**
 
-1. Marks
+- Clear meaning
+- Sophisticated use of contrast
+- Refined execution, paying deep attention to detail
+
+#### Pre-attentive attributes: marks and channels
+*Pre-attentive attributes* are the elements of a data visualization that people recognize automatically without conscious effort. The essential, basic building blocks that make visuals immediately understandable are called marks and channels.
+
+1. **Marks**
 
 - *position*: where a specific mark is in space in relation to a scale or to other marks
 
@@ -995,4 +1002,84 @@ If a lot of processing is happening in the database, dropping your temporary tab
 
 - *color*: what color the mark is
 
+2. **Channels**
+
+*Channels* are visual aspects or variables that represent characteristics of the data. Channels are basically marks that have been used to visualize data. Channels will vary in terms of how effective they are at communicating data based on three elements: 
+
+1. *Accuracy*: are the channels helpful in accurately estimating the values being represented?
+
+2. *Popout*: how easy is it to distinguish certain values from others?
+
+3. *Grouping*: how good is a channel at communicating groups that exist in the data?
+
+#### Design principles
+- Choose the right visual
+- Optimize the data-ink ratio
+- Use orientation effectively
+- Color
+- Numbers of things
+
+**What to avoid:**
+
+- Cutting off the y-axis
+- Misleading use of a dual y-axis
+- Artificially limiting the scope of the data
+- Problematic choices in how data is binned or grouped
+- Using part-to-whole visuals when the totals do not sum up appropriately
+- Hiding trends in cumulative charts
+- Artificially smoothing trends
+
+**Nine basic principles of design:**
+
+1. **Balance**: The design of a data visualization is balanced when the key visual elements, like color and shape, are distributed evenly.
+
+2. **Emphasis**: Your data visualization should have a focal point, so that your audience knows where to concentrate.
+
+3. **Movement**: Movement can refer to the path the viewer’s eye travels as they look at a data visualization, or literal movement created by animations.
+
+4. **Pattern**: You can use similar shapes and colors to create patterns in your data visualization.
+
+5. **Repetition**: Repeating chart types, shapes, or colors adds to the effectiveness of your visualization.
+
+6. **Proportion**: Proportion is another way that you can demonstrate the importance of certain data.
+
+7. *Rhythm*: This refers to creating a sense of movement or flow in your visualization.
+
+8. *Variety*: Your visualizations should have some variety in the chart types, lines, shapes, colors, and values you use. Variety keeps the audience engaged.
+
+9. *Unity*: This means that your final data visualization should be cohesive.
+
+#### Design thinking and visualizations
+**Five phases of the design process:**
+
+- *Empathize*: Thinking about the emotions and needs of the target audience for the data visualization
+
+- *Define*: Figuring out exactly what your audience needs from the data
+
+- *Ideate*: Generating ideas for data visualization
+
+- *Prototype*: Putting visualizations together for testing and feedback
+
+- *Test*: Showing prototype visualizations to people before stakeholders see them
+
+#### Making data viz accessible
+- Labeling
+- Text alternatives
+- Text-based format
+- Distinguishing, making the content easier to see
+- Simplify
+
+**Highlighting key informations:**
+
+- Headlines that pop
+- Subtitles that clarify
+- Labels that identify
+- Annotations that focus
+
+
+### Creating data viz with Tableau
+
+### Crafting data stories
+
+### Developing presentations and slideshows
 
