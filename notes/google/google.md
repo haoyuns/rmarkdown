@@ -963,4 +963,36 @@ Dropping a temporary table is a little different from deleting a temporary table
 
 Deleting a temporary table removes the rows of the table but leaves the table definition and columns ready to be used again. Although local temporary tables are dropped after you end your SQL session, it may not happen immediately.
 
-If a lot of processing is happening in the database, dropping your temporary tables after using them is a good practice to keep the database running smoothly. 
+If a lot of processing is happening in the database, dropping your temporary tables after using them is a good practice to keep the database running smoothly.
+
+## Data Visualization
+### Effective data viz
+1. The McCandless Method
+
+- Information: the data you are working with
+- Story: a clear and compelling narrative or concept
+- Goal: a specific objective or function for the visual
+- Visual form: an effective use of metaphor or visual expression
+
+![](https://infobeautiful4.s3.amazonaws.com/2015/05/2552_What-Makes-a-Good-Infoviz-frame02.png)
+
+2. Kaiser Fung's Junk Charts Trifecta Checkup
+
+- What is the practical question?
+- What does the data say?
+- What does the visual say?
+
+#### Pre-attentive attributes: marks and channels
+**Pre-attentive attributes** are the elements of a data visualization that people recognize automatically without conscious effort. The essential, basic building blocks that make visuals immediately understandable are called marks and channels.
+
+1. Marks
+
+- *position*: where a specific mark is in space in relation to a scale or to other marks
+
+- *size*: how big, small, long, or tall a mark is
+
+- *shape*: whether a specific object is given a shape that communicates something about it
+
+- *color*: what color the mark is
+
+
