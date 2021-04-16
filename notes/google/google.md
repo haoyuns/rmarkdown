@@ -1078,8 +1078,54 @@ If a lot of processing is happening in the database, dropping your temporary tab
 
 
 ### Creating data viz with Tableau
+#### Tableau viz
+- Highlight tables
+- Heat maps
+- Density maps
+- Gantt charts
+- Symbol maps
+- Filled maps
+- Circle views
+- Box plots
+- Bullet graphs
+- Packed bubble charts
+
+Tableau guide: https://help.tableau.com/current/pro/desktop/en-us/datasource_prepare.htm
+
+#### Diverging color palette
+displays two ranges of values using **color intensity** to show the magnitude of the number and the actual color to show which range the numbers from.
 
 ### Crafting data stories
+**Data storytelling** is communicating the meaning of a data set with visuals and a narrative that are customized for each particular audience.
+
+#### Data storytelling steps
+1. Engage your audience: capturing and holding someone's interest and attention
+
+2. Create compelling visuals: show the story of your data
+
+3. Tell the story in an interesting narrative:  
+A narrative has a beginning, a middle, and an end, it should connect the data you've collected to the project objective and clearly explain important insights from your analysis.
+
+#### Evaluate a viz
+1. **Setting context:**
+- How does the visualization help set the context?
+- How does the visualization help clarify the data?
+- Do you notice a data visualization best practice?
+
+2. **Analyze variables:**
+- How does the visualization perform against the five-second rule?
+- How does the visualization help clarify the data?
+- Do you notice a data visualization best practice?
+
+3. **Drawing conclusions:**
+- How does the visualization help make a point?
+- How does the visualization help clarify the data?
+- Do you notice a data visualization best practice?
+
+
+**Spotlighting** is scanning through the data to quickly identify the most important insights.
+
+
 
 ### Developing presentations and slideshows
 
