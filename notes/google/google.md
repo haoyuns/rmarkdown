@@ -1095,6 +1095,30 @@ Tableau guide: https://help.tableau.com/current/pro/desktop/en-us/datasource_pre
 #### Diverging color palette
 displays two ranges of values using **color intensity** to show the magnitude of the number and the actual color to show which range the numbers from.
 
+#### Live vs. static dashboards
+- **Static data**
+
+Static data involves providing screenshots or snapshots in presentations or building dashboards using snapshots of data. There are pros and cons to static data.
+
+| PROS | CONS |
+|------|------|
+|Can tightly control a point-in-time narrative of the data and insight|Insight immediately begins to lose value and continues to do so the longer the data remains in a static state|
+|Allows for complex analysis to be explained in-depth to a larger audience|Snapshots can't keep up with the pace of data change|
+
+
+- **Live data**
+
+Live data means that you can build dashboards, reports, and views connected to automatically updated data. 
+
+| PROS | CONS |
+|------|------|
+|more dynamic and scalable|Can take engineering resources to keep pipelines live and scalable, which may be outside the scope of some companies' data resource allocation|
+|Gives the most up-to-date data to the people who need it at the time when they need it|You can lose control of the narrative, which can cause data chaos (i.e. teams coming to conflicting conclusions based on the same data)|
+|Allows for up-to-date curated views into data with the ability to build a scalable “single source of truth” for various use cases|Can potentially cause a lack of trust if the data isn’t handled properly|
+|Allows for immediate action to be taken on data that changes frequently|-|
+|Alleviates time/resources spent on processes for every analysis|-|
+
+
 ### Crafting data stories
 **Data storytelling** is communicating the meaning of a data set with visuals and a narrative that are customized for each particular audience.
 
@@ -1125,33 +1149,20 @@ A narrative has a beginning, a middle, and an end, it should connect the data yo
 
 **Spotlighting** is scanning through the data to quickly identify the most important insights.
 
-#### Tableau dashboards (live vs. static)
-**Static data**
+#### Compleling presentation tips
+The narrative you share with your stakeholders needs
 
-Static data involves providing screenshots or snapshots in presentations or building dashboards using snapshots of data. There are pros and cons to static data.
+- **characters**: people affected by your story, such as your stakeholders, customers, clients, etc. Think about why they care.
 
-| PROS | CONS |
-|------|------|
-|Can tightly control a point-in-time narrative of the data and insight|Insight immediately begins to lose value and continues to do so the longer the data remains in a static state|
-|Allows for complex analysis to be explained in-depth to a larger audience|Snapshots can't keep up with the pace of data change|
+- **setting**: how often it's happening, what tasks are involved, and other background information.
 
+- **plot**: sometimes called the conflict, is what creates tension in the current situation. 
 
-**Live data**
+- **big reveal**: or resolution, is how the data has shown that you can solve the problem the characters are facing by becoming more competitive, improving a process, inventing a new system, or whatever the ultimate goal of your data project may be.
 
-Live data means that you can build dashboards, reports, and views connected to automatically updated data. 
+- **"aha moment"**: when you share your recommendations and explain why you think they'll help your company be successful. 
 
-| PROS | CONS |
-|------|------|
-|more dynamic and scalable|Can take engineering resources to keep pipelines live and scalable, which may be outside the scope of some companies' data resource allocation|
-|Gives the most up-to-date data to the people who need it at the time when they need it|You can lose control of the narrative, which can cause data chaos (i.e. teams coming to conflicting conclusions based on the same data)|
-|Allows for up-to-date curated views into data with the ability to build a scalable “single source of truth” for various use cases|Can potentially cause a lack of trust if the data isn’t handled properly|
-|Allows for immediate action to be taken on data that changes frequently|-|
-|Alleviates time/resources spent on processes for every analysis|-|
-
-
-
-
-
+**Sharing a narrative**: select an appropriate *theme*; add your text, visuals, and an exciting reveal at the end; try *pasting, linking, and embedding* visuals from different sources to see how they behave differently.
 
 ### Developing presentations and slideshows
 
