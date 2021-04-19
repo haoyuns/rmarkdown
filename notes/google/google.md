@@ -1165,4 +1165,38 @@ The narrative you share with your stakeholders needs
 **Sharing a narrative**: select an appropriate *theme*; add your text, visuals, and an exciting reveal at the end; try *pasting, linking, and embedding* visuals from different sources to see how they behave differently.
 
 ### Developing presentations and slideshows
+**Presenting with a framework:**
 
+- create logical connections that tie back to the business task
+- gives your audience context about your data
+- helps you focus on the most important information
+
+**Weaving data into your presentation:**
+
+1. It's helpful for your audience to understand what data was available during data collection. You can also tell them if any new relevant data has come up, or if you discovered that you need different data.
+
+2. Establish the initial *hypothesis*. Your initial hypothesis is a theory you're trying to prove or disprove with data. You want to establish your hypothesis early in the presentation so that your audience has the right context to put it in.
+
+3. Next, you'll want to explain the solution to your business tasks using examples and visualizations.
+
+*The McCandless Method:*
+
+- Introduce the graphic by name
+- Answer obvious questions before they're asked
+- State the insight of your graphic
+- Call out data to support that insight
+- Tell your audience why it matters
+
+4. Take a second to self-check and ask yourself, *"Does this data point or chart support the point I want people to walk away with?"* It's a good reminder to think about your audience every time you add data to a presentation.
+
+#### Good data presentation
+The good presentation **logically** guides the audience through the data – from the objectives at the beginning all the way to the conclusions at the end.
+
+- Title and date the presentation was last updated
+- Flow or table of contents
+- Transition slides
+- Visual introduction to the data (also used as a repeated theme)
+- Animated bullet points
+- Annotations on top of visuals
+- Logic and progression
+- Limitations to the data (caveats), what the data can’t tell you
