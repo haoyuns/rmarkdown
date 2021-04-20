@@ -1123,12 +1123,12 @@ Live data means that you can build dashboards, reports, and views connected to a
 **Data storytelling** is communicating the meaning of a data set with visuals and a narrative that are customized for each particular audience.
 
 #### Data storytelling steps
-1. Engage your audience: capturing and holding someone's interest and attention
+1. *Engage* your audience: capturing and holding someone's interest and attention
 
 2. Create compelling visuals: show the story of your data
 
-3. Tell the story in an interesting narrative:  
-A narrative has a beginning, a middle, and an end, it should connect the data you've collected to the project objective and clearly explain important insights from your analysis.
+3. Tell the story in an interesting *narrative*:  
+A *narrative* has a beginning, a middle, and an end, it should connect the data you've collected to the project objective and clearly explain important insights from your analysis.
 
 #### Evaluate a viz
 1. **Setting context:**
