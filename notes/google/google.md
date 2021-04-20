@@ -1202,4 +1202,71 @@ The good presentation **logically** guides the audience through the data – fro
 - Limitations to the data (caveats), what the data can’t tell you
 
 #### Presentation tips
+1. Channel your excitement
+2. Start with the broader ideas
+3. Use the "five second"" rule
+4. Preparation is key
 
+#### Your audience
+- will not always see the steps you took to reach a conclusion
+- has a lot on their mind
+- is easily distracted
+
+#### How you speak
+- Keep your sentences short
+- Build intentional pauses
+- Keep the pitch of your sentences level
+
+#### Be mindful of nervous habits
+- Stay still and move with purpose
+- Practice good posture
+- Make positive eye contact
+
+#### Preparing for the Q&A
+- Understand your stakeholder's expectations
+- Make sure you have a clear understanding of the objective and what the stakeholders wanted
+
+- The colleague test: do a test-run of your presentation
+- Start with zero assumptions: not familiar with jargon, acronyms, past events or other background info
+- Work with your team to anticipate questions and draft responses
+
+- Be prepared to consider any limitations of your data
+  - critically analyzing the correlations
+  - looking at the context
+  - understanding the strengths and weakness of the tools
+
+#### Handling objections
+- About the *data*
+  - where you got the data?
+  - what systems it came from?
+  - what transformations happened to it?
+  - how fresh and accurate is the data?
+
+- About the *analysis*
+  - is it reproducible? (keep changelogs)
+  - who do you get feedback from? (include lots of perspectives)
+
+- About the *findings*
+  - do these findings exist in previous time periods?
+  - did you control for the differences in your data?
+
+#### Respoinding
+- Communicate any assumptions
+- Explain why your analysis might be different than expected
+- Acknowledge that those objections are valid and take steps to investigate further
+
+**Correlation and causation**  
+In your data analysis, remember to: 
+
+- Critically analyze any correlations that you find 
+- Examine the data’s context to determine if a causation makes sense (and can be supported by all of the data)
+- Understand the limitations of the tools that you use for analysis
+
+#### Q&A tips
+- Listen to the whole question
+- Repeat the question (if necessary)
+- Understand the context
+- Involve the whole audience
+- Keep your responses short and to the point
+
+(You don't have to answer every question on the spot.)
