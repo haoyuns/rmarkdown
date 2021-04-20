@@ -1200,3 +1200,6 @@ The good presentation **logically** guides the audience through the data – fro
 - Annotations on top of visuals
 - Logic and progression
 - Limitations to the data (caveats), what the data can’t tell you
+
+#### Presentation tips
+
