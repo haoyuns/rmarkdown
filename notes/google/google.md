@@ -1290,7 +1290,7 @@ Basic concepts of R
 
 Relationships among these four main types of vectors:
 
-![]("datomic.png")
+<img src="datomic.png" width="600"/>
 
 
 *Functions to work with:*
@@ -1298,7 +1298,9 @@ Relationships among these four main types of vectors:
 - what type of vector you are working with, `typeof()` function
 - number of elements a vector contains, `length()` function
 - name the elements of a vector, `names()` function
-- You can also check if a vector is a specific type by using an `is` function: `is.logical()`, `is.double()`, `is.integer()`, `is.character()`
+
+You can also check if a vector is a specific type by using an `is` function: `is.logical()`, `is.double()`, `is.integer()`, `is.character()`.
+
 
 2. **Lists**  
 elements can be of any type, like dates, data frames, vectors, matrices, and even other lists
@@ -1318,15 +1320,23 @@ Functions:
 - `ymd()`, `ymd_hms()`
 - `as_date()`
 
+
 4. **Data frames**  
 A data frame is a collection of columns–similar to a spreadsheet or SQL table.
+
 
 5. **Files**
   - create, `file.create (“new_text_file.txt”)`
   - copy, `file.copy (“new_text_file.txt” , “destination_folder”)`
   - delete R files using `unlink (“some_.file.csv”)`
 
+
 6. **Matrices**
-A matrix is a two-dimensional collection of data elements.
+
+A *matrix* is a two-dimensional collection of data elements.
+
+By contrast, a *vector* is a one-dimensional sequence of data elements. But like vectors, matrices can only contain a single data type.
+
+
 
 #### Dates and times
