@@ -1321,7 +1321,8 @@ Functions:
 - `as_date()`
 
 
-4. **Data frames**  
+4. **Data frames**
+
 A data frame is a collection of columns–similar to a spreadsheet or SQL table.
 
 
@@ -1338,5 +1339,4 @@ A *matrix* is a two-dimensional collection of data elements.
 By contrast, a *vector* is a one-dimensional sequence of data elements. But like vectors, matrices can only contain a single data type.
 
 
-
-#### Dates and times
+#### Operators
