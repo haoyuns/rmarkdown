@@ -1270,3 +1270,63 @@ In your data analysis, remember to:
 - Keep your responses short and to the point
 
 (You don't have to answer every question on the spot.)
+
+## R programming
+Basic concepts of R
+
+- Functions
+- Comments
+- Variables
+- Data types
+- Vectors
+- Pipes
+
+#### Data structures
+1. **Atomic vectors**
+  - logical, `TRUE` or `FALSE`
+  - integer, positive/negative whole values, `2`
+  - double, decimal values, `101.75`
+  - character, string values, `coding`
+
+Relationships among these four main types of vectors:
+
+![]("datomic.png")
+
+
+*Functions to work with:*
+
+- what type of vector you are working with, `typeof()` function
+- number of elements a vector contains, `length()` function
+- name the elements of a vector, `names()` function
+- You can also check if a vector is a specific type by using an `is` function: `is.logical()`, `is.double()`, `is.integer()`, `is.character()`
+
+2. **Lists**  
+elements can be of any type, like dates, data frames, vectors, matrices, and even other lists
+
+- create a list with the `list()` function
+- find out elements a list contains by using the `str()` function
+
+
+3. **Dates and times**
+  - A date `("2016-08-16")`
+  - A time within a day `(“20:11:59 UTC")`
+  - A date-time `("2018-03-31 18:15:48 UTC")`
+
+Functions:  
+
+- `today()`, `now()`
+- `ymd()`, `ymd_hms()`
+- `as_date()`
+
+4. **Data frames**  
+A data frame is a collection of columns–similar to a spreadsheet or SQL table.
+
+5. **Files**
+  - create, `file.create (“new_text_file.txt”)`
+  - copy, `file.copy (“new_text_file.txt” , “destination_folder”)`
+  - delete R files using `unlink (“some_.file.csv”)`
+
+6. **Matrices**
+A matrix is a two-dimensional collection of data elements.
+
+#### Dates and times
