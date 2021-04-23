@@ -1352,4 +1352,7 @@ By contrast, a *vector* is a one-dimensional sequence of data elements. But like
 
 Check what's available with `installed.packages()`.
 
+Update with `update.packages()`.
+
+
 
