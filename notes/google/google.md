@@ -1281,6 +1281,7 @@ Basic concepts of R
 - Vectors
 - Pipes
 
+### Basics
 #### Data structures
 1. **Atomic vectors**
   - logical, `TRUE` or `FALSE`
@@ -1340,9 +1341,10 @@ By contrast, a *vector* is a one-dimensional sequence of data elements. But like
 
 
 #### Operators
-- Assignment operators: `<-`
-- Arithmetic operators: `+`, `-`, `/`, `*`
+- Assignment operators: `<-`, `=`, `->`
+- Arithmetic operators: `+`, `-`, `/`, `*`, `%%`, `^`
 - Logical operators: `&`, `|`, `!`
+- Relational operators: `<`, `>`, `!=`
 
 #### R packages
 - Reusable R functions
@@ -1354,5 +1356,58 @@ Check what's available with `installed.packages()`.
 
 Update with `update.packages()`.
 
+#### Pipes
+`%>%`, "nested" describes code that performs a particular function and is contained within code that performs a broader function.
 
+Keyboard shortcut: cmd/ctrl+shift+m
+
+### Working with data in R
+#### Data frames
+*Data frame*: a collection of columns
+
+*Tibbles*: streamlined data frames
+
+- never change the data types of the inputs
+- never change the names of your variables
+- never create row names
+- make printing easier  
+(won't overload console; automatically set to pull up only the first 10 rows)
+- `as_tibble()`
+
+Common functions
+
+- `head()`
+- `str()`
+- `colnames()`
+- `glimpse()`
+
+- readr functions
+  - `read_csv()`, `read_tsv()`
+  - `read_delim()`, delimited files
+  - `read_fwf()`, fixed-width
+  - `read_table()`, tabular files
+  - `read_log()`, web log files
+
+#### Cleaning data
+Packages: `here`, `skimr`, `janitor`, `dplyr`
+
+**Get summaries of data frames**
+
+- `skim_without_charts()`
+- `glimpse()`
+- `head()`
+- `select(-col_A)`
+
+
+**Change column names**
+
+- `rename(col_A = col_a)`
+- `rename_with(data_frame, tolower/toupper)`
+- `janitor::clean_names(data_frame)`, ensure only chars, numbers and underscores in the names
+
+
+
+### Visualizations, aethetics and annotations
+
+### Documentation and reports
 
