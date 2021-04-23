@@ -1340,3 +1340,6 @@ By contrast, a *vector* is a one-dimensional sequence of data elements. But like
 
 
 #### Operators
+- Assignment operators: `<-`
+- Arithmetic operators: `+``-``/``*`
+- Logical operators: `&``|``!`
