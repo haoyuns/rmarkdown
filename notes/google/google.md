@@ -1341,5 +1341,15 @@ By contrast, a *vector* is a one-dimensional sequence of data elements. But like
 
 #### Operators
 - Assignment operators: `<-`
-- Arithmetic operators: `+``-``/``*`
-- Logical operators: `&``|``!`
+- Arithmetic operators: `+`, `-`, `/`, `*`
+- Logical operators: `&`, `|`, `!`
+
+#### R packages
+- Reusable R functions
+- Documentation about the functions
+- Sample datasets
+- Tests for checking your code
+
+Check what's available with `installed.packages()`.
+
+
