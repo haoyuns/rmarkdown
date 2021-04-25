@@ -1553,8 +1553,8 @@ HTML documents are good for communicating with stakeholders.
 | JOB description | Resume skills |
 |------|------|
 |Collect data by using a scripting language such as SQL|- Perform SQL queries<br>- Sort and filter data using SQL queries<br>- Convert data types using SQL functions|
-|Visualize data insights and communicate your findings to teams in other organizations|- Create data visualizations using Tableau<br>- Create visuals in spreadsheets<br>- Create presentations from data analysis results|
+|Visualize data insights and communicate your findings<br>to teams in other organizations|- Create data visualizations using Tableau<br>- Create visuals in spreadsheets<br>- Create presentations from data analysis results|
 |Build and train users of new *dashboards*|- Identify the data needs of users<br>- Create dashboards using Tableau<br>- Use design thinking to improve dashboards|
 |Create comprehensive *reports*|- Create data cleaning reports<br>- Create and maintain change logs<br>- Create reports in R Markdown|
 |Explore and analyze datasets with *spreadsheets*|- Clean data in spreadsheets<br>- Sort and filter data in spreadsheets<br>- Create pivot tables in spreadsheets|
-|Knowledge of some *programming* languages and an organized and methodical approach to work|- Install and use the tidyverse package in R<br>- Run scripts in RStudio<br>- Create data visualizations in RStudio|
+|Knowledge of some *programming* languages<br>and an organized and methodical approach to work|- Install and use the tidyverse package in R<br>- Run scripts in RStudio<br>- Create data visualizations in RStudio|
