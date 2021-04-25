@@ -1406,8 +1406,53 @@ Packages: `here`, `skimr`, `janitor`, `dplyr`
 - `janitor::clean_names(data_frame)`, ensure only chars, numbers and underscores in the names
 
 
+**Organize data**
+
+- `arrange()`
+- `group_by()`
+- `filter()`
+
+
+#### Transform data
+- `tidyr::separate()`
+- `tidyr::unite()`
+- `dplyr::mutate()`
+- `tidyr::pivot_longer` and `tidyr::pivot_wider`
+
+**Quantify bias**
+
+- `sample()` to inject a randomization element 
+- `bias`
+
+Reference: https://www.rdocumentation.org/packages/SimDesign/versions/2.2/topics/bias
+
+Data science ethics: https://datasciencebox.org/ethics.html
+
 
 ### Visualizations, aethetics and annotations
+- `Plotly`
+- `RGL`, 3D visuals
+- `Lattice`
+- `Dygraphs`
+- `Leaflet`
+- `Highcharter`
+- `Patchwork`
+- `ggplot2`, `gganimate`, `ggridges`
+
+#### ggplot2
+- *Aethetics*, visual property of an object
+
+- *Geoms*, geometric object used to represent your data
+
+- *Facets*, displaying smaller groups or subsets of your data
+
+- *Labels and annotations*, customizing plot
+
+
+
+
+
+
 
 ### Documentation and reports
 
