@@ -1529,22 +1529,22 @@ HTML documents are good for communicating with stakeholders.
 
 ## Capstone
 ### Case study checklist
-- Introduction, state the purpose of the case study
+- **Introduction**, state the purpose of the case study
   - what the scenario is
   - an explanation on how it relates to a real-world obstacle
   - feel free to note any assumptions or theories you might have depending on the information provided
 
-- Problems, identify what the major problems are
+- **Problems**, identify what the major problems are
   - explain how you have analyzed the problem
   - present any facts you are using to support your findings
 
-- Solutions, alleviate the problem
+- **Solutions**, alleviate the problem
   - have a few alternatives in mind to show that you have given the case study considerable thought
   - include pros and cons for each solution
 
-- Conclusion, summarizing key takeaways of all of the problem-solving you conducted, highlighting what you have learned from this
+- **Conclusion**, summarizing key takeaways of all of the problem-solving you conducted, highlighting what you have learned from this
 
-- Next steps, choose the best solution and propose recommendations for the client or business to take
+- **Next steps**, choose the best solution and propose recommendations for the client or business to take
   - explain why you made your choice
   - how this will affect the scenario in a positive way
   - include what needs to be done, who should enforce it, and when
