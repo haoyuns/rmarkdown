@@ -1401,7 +1401,7 @@ Packages: `here`, `skimr`, `janitor`, `dplyr`
 
 **Change column names**
 
-- `rename(col_A = col_a)`
+- `dplyr::rename(new_name = old_name)`
 - `rename_with(data_frame, tolower/toupper)`
 - `janitor::clean_names(data_frame)`, ensure only chars, numbers and underscores in the names
 
@@ -1463,11 +1463,66 @@ Data science ethics: https://datasciencebox.org/ethics.html
 
 - *Labels and annotations*, customizing plot
 
+  - Labels: `labs(x/y/title/subtitle/caption/color = "")`
+  
+  - Annotations: `annotate("text", x=, y=, label="")`
+  - Reference: https://ggplot2-book.org/annotations.html
+  
+
 **Mapping**: matching up a specific variable in your dataset with a specific aesthetic
 
-#### 
-
+#### Save plots
+- plot tab, export options
+- `ggsave("filename")`
+- `png("filename", bg = "transparent")`
+- `pdf("filename", width = 4, height = 4)`
+- reference: https://ggplot2.tidyverse.org/reference/ggsave.html
 
 
 ### Documentation and reports
+- R Markdown [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf?_ga=2.49295910.1034302809.1602760608-739985330.1601281773)
+- [Guide](https://bookdown.org/yihui/rmarkdown/)
 
+#### R markdown structures
+*Delimiters*: mark where the data item begins and ends
+
+1. YAML: a language for data that translates it so it's readable
+
+  - metadata section
+  - title/author/date/output...
+
+2. Text
+
+  - headers
+  - paragraphs
+  - bullets, links, images
+
+3. Code chunks
+
+  - shortcuts: `cmd + option + I`
+  - `{r loading packages}` will add layers to navigate
+  - output options
+
+4. Export into a report
+
+  - `Knit` to HTML/PDF/Word/odt/rtf/md/github...
+  - YAML `output`
+
+#### R presentations
+- `beamer_presentation`, for PDF presentations with beamer
+- `ioslides_presentation`, for HTML presentations with ioslides
+- `slidy_presentation`, for HTML presentations with Slidy
+- `powerpoint_presentation`, for PowerPoint
+- `revealjs : : revealjs_presentation`, for HTML presentations with reveal.js framework
+
+#### Other formats
+HTML documents are good for communicating with stakeholders.
+
+- [notebook](https://rmarkdown.rstudio.com/lesson-10.html)
+  - better for collaborating with others
+  - rendered output always includes an embedded copy of the source code
+- `shiny`, interactive web app
+- `flexdashboard` package, [dashboard](https://rmarkdown.rstudio.com/flexdashboard/)
+- `bookdown`
+- `prettydoc`, themes
+- `rticles`, templates
