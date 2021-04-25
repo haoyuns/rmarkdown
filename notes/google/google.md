@@ -1552,4 +1552,4 @@ HTML documents are good for communicating with stakeholders.
 #### Job description vs. Skills
 | JOB description | Resume skills |
 |------|------|
-|Collect data by using a scripting language such as SQL|- Perform SQL queries - Sort and filter data using SQL queries - Convert data types using SQL functions |
+|Collect data by using a scripting language such as SQL|- Perform SQL queries<br>- Sort and filter data using SQL queries<br>- Convert data types using SQL functions |
