@@ -1441,16 +1441,31 @@ Data science ethics: https://datasciencebox.org/ethics.html
 
 #### ggplot2
 - *Aethetics*, visual property of an object
+  - x, y
+  - color
+  - shape
+  - size
+  - alpha
+  - fill
 
 - *Geoms*, geometric object used to represent your data
+  - bar/point/line
+  
+  - *smoothing* enables the detection of a data trend
+    - Loess smoothing: best for plots with less than 1000 points, `geom_point() + geom_smooth(method="loess"`
+  
+    - Gam smoothing: for plots with a large number of points, `geom_point() + geom_smooth(method="gam", formula = y ~s(x))`
+
 
 - *Facets*, displaying smaller groups or subsets of your data
+  - `facet_wrap(~ variableA)`
+  - `facet_wrap(variableA ~ variableB)`
 
 - *Labels and annotations*, customizing plot
 
+**Mapping**: matching up a specific variable in your dataset with a specific aesthetic
 
-
-
+#### 
 
 
 
