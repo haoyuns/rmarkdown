@@ -1480,7 +1480,7 @@ Data science ethics: https://datasciencebox.org/ethics.html
 
 
 ### Documentation and reports
-- R Markdown [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf?_ga=2.49295910.1034302809.1602760608-739985330.1601281773)
+- R Markdown [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 - [Guide](https://bookdown.org/yihui/rmarkdown/)
 
 #### R markdown structures
@@ -1526,3 +1526,32 @@ HTML documents are good for communicating with stakeholders.
 - `bookdown`
 - `prettydoc`, themes
 - `rticles`, templates
+
+## Capstone
+### Case study checklist
+- Introduction, state the purpose of the case study
+  - what the scenario is
+  - an explanation on how it relates to a real-world obstacle
+  - feel free to note any assumptions or theories you might have depending on the information provided
+
+- Problems, identify what the major problems are
+  - explain how you have analyzed the problem
+  - present any facts you are using to support your findings
+
+- Solutions, alleviate the problem
+  - have a few alternatives in mind to show that you have given the case study considerable thought
+  - include pros and cons for each solution
+
+- Conclusion, summarizing key takeaways of all of the problem-solving you conducted, highlighting what you have learned from this
+
+- Next steps, choose the best solution and propose recommendations for the client or business to take
+  - explain why you made your choice
+  - how this will affect the scenario in a positive way
+  - include what needs to be done, who should enforce it, and when
+
+#### Job description vs. Skills
+| JOB description | Resume |
+|------|------|
+|Collect data by using a scripting language such as SQL|- Perform SQL queries
+- Sort and filter data using SQL queries
+- Convert data types using SQL functions |
